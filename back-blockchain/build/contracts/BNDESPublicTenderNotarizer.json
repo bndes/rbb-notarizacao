@@ -24,9 +24,9 @@
         },
         {
           "indexed": false,
-          "internalType": "bytes32",
+          "internalType": "uint256",
           "name": "",
-          "type": "bytes32"
+          "type": "uint256"
         },
         {
           "indexed": false,
@@ -56,9 +56,9 @@
       "name": "notarizedPublicTender",
       "outputs": [
         {
-          "internalType": "bytes32",
+          "internalType": "uint256",
           "name": "documentListHash",
-          "type": "bytes32"
+          "type": "uint256"
         },
         {
           "internalType": "uint256",
@@ -99,9 +99,9 @@
           "type": "uint256"
         },
         {
-          "internalType": "bytes32",
+          "internalType": "uint256",
           "name": "documentListHash",
-          "type": "bytes32"
+          "type": "uint256"
         }
       ],
       "name": "notarizePublicTender",
@@ -111,15 +111,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"registryAddr\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"PublicTenderNotarized\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"publicTenderId\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"documentListHash\",\"type\":\"bytes32\"}],\"name\":\"notarizePublicTender\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"notarizedPublicTender\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"documentListHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"lastNotarizationDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"version\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"contract RBBRegistry\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/glads/src/bndes/rbb-notarizer/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol\":\"BNDESPublicTenderNotarizer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/glads/src/bndes/rbb-notarizer/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol\":{\"keccak256\":\"0xba2ce4e3ac3bbccaf808438113b19d628701897d90a9dfe513c480e8983ba6c1\",\"urls\":[\"bzz-raw://a4b62f96db5b1f20207341cc15e435fb5b3831840e532c4157a7d4cef8346e7b\",\"dweb:/ipfs/QmSr98Rxykm9EXJDwiFDtbf5FbTdD7VPNVd3Gf15gzRi19\"]},\"/Users/glads/src/bndes/rbb-notarizer/back-blockchain/contracts/RBBRegistry.sol\":{\"keccak256\":\"0xa21b3e03c26b9f189ea55f52fbeee681ebb86ebaecb42e4256c6777e441ae622\",\"urls\":[\"bzz-raw://ccf42d33fe15dbf126c99c88a3bf5535d820fa3c7fa8f6a568fa9c76207bc6e4\",\"dweb:/ipfs/QmUuTSyx3by9bC6roeL5KN3GBaczayjtvyPzB9bqDyMoyX\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516105d73803806105d78339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166365f68c89336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561012257600080fd5b505afa158015610136573d6000803e3d6000fd5b505050506040513d602081101561014c57600080fd5b810190808051906020019092919050505060018190555050610464806101736000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80637b10399914610046578063b40e124d14610090578063b8f76620146100e0575b600080fd5b61004e610118565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100bc600480360360208110156100a657600080fd5b810190808035906020019092919050505061013d565b60405180848152602001838152602001828152602001935050505060405180910390f35b610116600480360360408110156100f657600080fd5b810190808035906020019092919080359060200190929190505050610167565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60026020528060005260406000206000915090508060000154908060010154908060020154905083565b6001546000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166365f68c89336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561020857600080fd5b505afa15801561021c573d6000803e3d6000fd5b505050506040513d602081101561023257600080fd5b810190808051906020019092919050505014610299576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602f815260200180610401602f913960400191505060405180910390fd5b6000801b6002600084815260200190815260200160002060000154141561030f57604051806060016040528082815260200142815260200160018152506002600084815260200190815260200160002060008201518160000155602082015181600101556040820151816002015590505061036b565b806002600084815260200190815260200160002060000181905550426002600084815260200190815260200160002060010181905550600160026000848152602001908152602001600020600201600082825401925050819055505b7ffe584818d6a6d08a1213fddf9b1733266dd12fa8b7740defed18b0a5584ceffa826002600085815260200190815260200160002060000154600260008681526020019081526020016000206001015460026000878152602001908152602001600020600201546040518085815260200184815260200183815260200182815260200194505050505060405180910390a1505056fe53c3b3206f2070726f7072696574c3a172696f20706f646520657865637574617220657373612066756ec3a7c3a36fa265627a7a72315820e0196fdc641da5c0489eb94ff9bdacfe09d8aa58eddb10aeed45a9184de8702364736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80637b10399914610046578063b40e124d14610090578063b8f76620146100e0575b600080fd5b61004e610118565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100bc600480360360208110156100a657600080fd5b810190808035906020019092919050505061013d565b60405180848152602001838152602001828152602001935050505060405180910390f35b610116600480360360408110156100f657600080fd5b810190808035906020019092919080359060200190929190505050610167565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60026020528060005260406000206000915090508060000154908060010154908060020154905083565b6001546000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166365f68c89336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561020857600080fd5b505afa15801561021c573d6000803e3d6000fd5b505050506040513d602081101561023257600080fd5b810190808051906020019092919050505014610299576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602f815260200180610401602f913960400191505060405180910390fd5b6000801b6002600084815260200190815260200160002060000154141561030f57604051806060016040528082815260200142815260200160018152506002600084815260200190815260200160002060008201518160000155602082015181600101556040820151816002015590505061036b565b806002600084815260200190815260200160002060000181905550426002600084815260200190815260200160002060010181905550600160026000848152602001908152602001600020600201600082825401925050819055505b7ffe584818d6a6d08a1213fddf9b1733266dd12fa8b7740defed18b0a5584ceffa826002600085815260200190815260200160002060000154600260008681526020019081526020016000206001015460026000878152602001908152602001600020600201546040518085815260200184815260200183815260200182815260200194505050505060405180910390a1505056fe53c3b3206f2070726f7072696574c3a172696f20706f646520657865637574617220657373612066756ec3a7c3a36fa265627a7a72315820e0196fdc641da5c0489eb94ff9bdacfe09d8aa58eddb10aeed45a9184de8702364736f6c63430005100032",
-  "sourceMap": "95:1739:0:-;;;773:146;8:9:-1;5:2;;;30:1;27;20:12;5:2;773:146:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;773:146:0;;;;;;;;;;;;;;;;852:12;829:8;;:36;;;;;;;;;;;;;;;;;;885:8;;;;;;;;;;;:14;;;900:10;885:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;885:26:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;885:26:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;885:26:0;;;;;;;;;;;;;;;;875:7;:36;;;;773:146;95:1739;;;;;;",
-  "deployedSourceMap": "95:1739:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;95:1739:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;138:27;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;380:68;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;380:68:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;925:907;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;925:907:0;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;138:27;;;;;;;;;;;;;:::o;380:68::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;925:907::-;690:7;;660:8;;;;;;;;;;;:14;;;675:10;660:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;660:26:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;660:26:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;660:26:0;;;;;;;;;;;;;;;;:37;652:97;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1169:1;1111:59;;:21;:37;1133:14;1111:37;;;;;;;;;;;:54;;;:59;1107:464;;;1251:47;;;;;;;;1273:16;1251:47;;;;1291:3;1251:47;;;;1296:1;1251:47;;;1194:21;:37;1216:14;1194:37;;;;;;;;;;;:104;;;;;;;;;;;;;;;;;;;;;;;;;;;1107:464;;;1402:16;1345:21;:37;1367:14;1345:37;;;;;;;;;;;:54;;:73;;;;1493:3;1432:21;:37;1454:14;1432:37;;;;;;;;;;;:58;;:64;;;;1559:1;1510:21;:37;1532:14;1510:37;;;;;;;;;;;:45;;;:50;;;;;;;;;;;1107:464;1586:239;1608:14;1637:21;:37;1659:14;1637:37;;;;;;;;;;;:54;;;1706:21;:37;1728:14;1706:37;;;;;;;;;;;:58;;;1779:21;:37;1801:14;1779:37;;;;;;;;;;;:45;;;1586:239;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;925:907;;:::o",
-  "source": "//SPDX-License-Identifier: MIT\npragma solidity >= 0.5.0 < 0.7.0;\n\nimport \"./RBBRegistry.sol\";\n\ncontract BNDESPublicTenderNotarizer \n{\n    RBBRegistry public registry;\n    uint ownerId;\n\n    struct NotarizedPublicTender\n    {\n        bytes32 documentListHash;\n        uint    lastNotarizationDate;\n        uint    version;\n    }\n\n    // PublicTenderId => NotarizedPublicTender\n    mapping (uint => NotarizedPublicTender) public notarizedPublicTender;\n\n    // Id of the procurement, hash of the document list, \n    // notarization date (now) and version \n    event PublicTenderNotarized(uint, bytes32, uint, uint);\n\n    modifier onlyOwner \n    {\n        require(registry.getId(msg.sender) == ownerId, \"Só o proprietário pode executar essa função\");\n        _;\n    }\n\n    constructor (address registryAddr) public\n    {\n        registry = RBBRegistry(registryAddr);\n        ownerId = registry.getId(msg.sender);\n\n    }\n\n    function notarizePublicTender (uint publicTenderId, bytes32 documentListHash) \n        public onlyOwner\n    {   \n        // If there is no value set to this procurementId...\n        if (notarizedPublicTender[publicTenderId].documentListHash == 0)\n        {\n            notarizedPublicTender[publicTenderId] = \n                NotarizedPublicTender(documentListHash, now, 1);\n        }\n        else\n        {\n            notarizedPublicTender[publicTenderId].documentListHash = documentListHash;\n            notarizedPublicTender[publicTenderId].lastNotarizationDate = now;\n            notarizedPublicTender[publicTenderId].version += 1;\n        }\n\n        emit PublicTenderNotarized(publicTenderId, \n            notarizedPublicTender[publicTenderId].documentListHash, \n            notarizedPublicTender[publicTenderId].lastNotarizationDate, \n            notarizedPublicTender[publicTenderId].version);\n    }\n}",
-  "sourcePath": "/Users/glads/src/bndes/rbb-notarizer/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"registryAddr\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"PublicTenderNotarized\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"publicTenderId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"documentListHash\",\"type\":\"uint256\"}],\"name\":\"notarizePublicTender\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"notarizedPublicTender\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"documentListHash\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lastNotarizationDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"version\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"contract RBBRegistry\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/glads/src/bndes/rbb-notarizacao/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol\":\"BNDESPublicTenderNotarizer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/glads/src/bndes/rbb-notarizacao/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol\":{\"keccak256\":\"0x51d4a0074de22c7f243aa845e23044fda28185b20a02c342204ddc508d32dbe2\",\"urls\":[\"bzz-raw://01b0dc58ce8c284d25f00eab826bb3ef94bbfe3c7cf925959a5eb26f3c066b78\",\"dweb:/ipfs/QmW4WkztgVSSs2KrMJXFWmvsBA9tsa6nGTe7EXYSYgWsHJ\"]},\"/Users/glads/src/bndes/rbb-notarizacao/back-blockchain/contracts/RBBRegistry.sol\":{\"keccak256\":\"0xeaeb02b0865fe81cba2aa229a274ab3939b91098981b87e1551f34d35fb6c3db\",\"urls\":[\"bzz-raw://ae55c4fb4d1564d2d73a1f34442f972419a1beb52d44cd3079ca9adeec8f01be\",\"dweb:/ipfs/QmZ9gabqfcrpcnimm82yKbfeF4frsqLbmJQZbCW2t82Fde\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516105d53803806105d58339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166365f68c89336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561012257600080fd5b505afa158015610136573d6000803e3d6000fd5b505050506040513d602081101561014c57600080fd5b810190808051906020019092919050505060018190555050610462806101736000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80637b10399914610046578063b40e124d14610090578063e586d72b146100e0575b600080fd5b61004e610118565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100bc600480360360208110156100a657600080fd5b810190808035906020019092919050505061013d565b60405180848152602001838152602001828152602001935050505060405180910390f35b610116600480360360408110156100f657600080fd5b810190808035906020019092919080359060200190929190505050610167565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60026020528060005260406000206000915090508060000154908060010154908060020154905083565b6001546000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166365f68c89336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561020857600080fd5b505afa15801561021c573d6000803e3d6000fd5b505050506040513d602081101561023257600080fd5b810190808051906020019092919050505014610299576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602f8152602001806103ff602f913960400191505060405180910390fd5b60006002600084815260200190815260200160002060000154141561030d576040518060600160405280828152602001428152602001600181525060026000848152602001908152602001600020600082015181600001556020820151816001015560408201518160020155905050610369565b806002600084815260200190815260200160002060000181905550426002600084815260200190815260200160002060010181905550600160026000848152602001908152602001600020600201600082825401925050819055505b7f03ce4a1078ee957434dc07c581504adfe7c4c64d301e8de7e411a4436440211a826002600085815260200190815260200160002060000154600260008681526020019081526020016000206001015460026000878152602001908152602001600020600201546040518085815260200184815260200183815260200182815260200194505050505060405180910390a1505056fe53c3b3206f2070726f7072696574c3a172696f20706f646520657865637574617220657373612066756ec3a7c3a36fa265627a7a7231582050a98014bcc969793c358da6007ff97cc569db7081968ce86901cd9ab546c8db64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80637b10399914610046578063b40e124d14610090578063e586d72b146100e0575b600080fd5b61004e610118565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100bc600480360360208110156100a657600080fd5b810190808035906020019092919050505061013d565b60405180848152602001838152602001828152602001935050505060405180910390f35b610116600480360360408110156100f657600080fd5b810190808035906020019092919080359060200190929190505050610167565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60026020528060005260406000206000915090508060000154908060010154908060020154905083565b6001546000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166365f68c89336040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561020857600080fd5b505afa15801561021c573d6000803e3d6000fd5b505050506040513d602081101561023257600080fd5b810190808051906020019092919050505014610299576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602f8152602001806103ff602f913960400191505060405180910390fd5b60006002600084815260200190815260200160002060000154141561030d576040518060600160405280828152602001428152602001600181525060026000848152602001908152602001600020600082015181600001556020820151816001015560408201518160020155905050610369565b806002600084815260200190815260200160002060000181905550426002600084815260200190815260200160002060010181905550600160026000848152602001908152602001600020600201600082825401925050819055505b7f03ce4a1078ee957434dc07c581504adfe7c4c64d301e8de7e411a4436440211a826002600085815260200190815260200160002060000154600260008681526020019081526020016000206001015460026000878152602001908152602001600020600201546040518085815260200184815260200183815260200182815260200194505050505060405180910390a1505056fe53c3b3206f2070726f7072696574c3a172696f20706f646520657865637574617220657373612066756ec3a7c3a36fa265627a7a7231582050a98014bcc969793c358da6007ff97cc569db7081968ce86901cd9ab546c8db64736f6c63430005100032",
+  "sourceMap": "95:1741:0:-;;;774:146;8:9:-1;5:2;;;30:1;27;20:12;5:2;774:146:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;774:146:0;;;;;;;;;;;;;;;;853:12;830:8;;:36;;;;;;;;;;;;;;;;;;886:8;;;;;;;;;;;:14;;;901:10;886:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;886:26:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;886:26:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;886:26:0;;;;;;;;;;;;;;;;876:7;:36;;;;774:146;95:1741;;;;;;",
+  "deployedSourceMap": "95:1741:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;95:1741:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;138:27;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;381:68;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;381:68:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;926:908;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;926:908:0;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;138:27;;;;;;;;;;;;;:::o;381:68::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;926:908::-;691:7;;661:8;;;;;;;;;;;:14;;;676:10;661:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;661:26:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;661:26:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;661:26:0;;;;;;;;;;;;;;;;:37;653:97;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1171:1;1113:21;:37;1135:14;1113:37;;;;;;;;;;;:54;;;:59;1109:464;;;1253:47;;;;;;;;1275:16;1253:47;;;;1293:3;1253:47;;;;1298:1;1253:47;;;1196:21;:37;1218:14;1196:37;;;;;;;;;;;:104;;;;;;;;;;;;;;;;;;;;;;;;;;;1109:464;;;1404:16;1347:21;:37;1369:14;1347:37;;;;;;;;;;;:54;;:73;;;;1495:3;1434:21;:37;1456:14;1434:37;;;;;;;;;;;:58;;:64;;;;1561:1;1512:21;:37;1534:14;1512:37;;;;;;;;;;;:45;;;:50;;;;;;;;;;;1109:464;1588:239;1610:14;1639:21;:37;1661:14;1639:37;;;;;;;;;;;:54;;;1708:21;:37;1730:14;1708:37;;;;;;;;;;;:58;;;1781:21;:37;1803:14;1781:37;;;;;;;;;;;:45;;;1588:239;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;926:908;;:::o",
+  "source": "//SPDX-License-Identifier: MIT\npragma solidity >= 0.5.0 < 0.7.0;\n\nimport \"./RBBRegistry.sol\";\n\ncontract BNDESPublicTenderNotarizer \n{\n    RBBRegistry public registry;\n    uint ownerId;\n\n    struct NotarizedPublicTender\n    {\n        uint256  documentListHash;\n        uint    lastNotarizationDate;\n        uint    version;\n    }\n\n    // PublicTenderId => NotarizedPublicTender\n    mapping (uint => NotarizedPublicTender) public notarizedPublicTender;\n\n    // Id of the procurement, hash of the document list, \n    // notarization date (now) and version \n    event PublicTenderNotarized(uint, uint256, uint, uint);\n\n    modifier onlyOwner \n    {\n        require(registry.getId(msg.sender) == ownerId, \"Só o proprietário pode executar essa função\");\n        _;\n    }\n\n    constructor (address registryAddr) public\n    {\n        registry = RBBRegistry(registryAddr);\n        ownerId = registry.getId(msg.sender);\n\n    }\n\n    function notarizePublicTender (uint publicTenderId, uint256  documentListHash) \n        public onlyOwner\n    {   \n        // If there is no value set to this procurementId...\n        if (notarizedPublicTender[publicTenderId].documentListHash == 0)\n        {\n            notarizedPublicTender[publicTenderId] = \n                NotarizedPublicTender(documentListHash, now, 1);\n        }\n        else\n        {\n            notarizedPublicTender[publicTenderId].documentListHash = documentListHash;\n            notarizedPublicTender[publicTenderId].lastNotarizationDate = now;\n            notarizedPublicTender[publicTenderId].version += 1;\n        }\n\n        emit PublicTenderNotarized(publicTenderId, \n            notarizedPublicTender[publicTenderId].documentListHash, \n            notarizedPublicTender[publicTenderId].lastNotarizationDate, \n            notarizedPublicTender[publicTenderId].version);\n    }\n}",
+  "sourcePath": "/Users/glads/src/bndes/rbb-notarizacao/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol",
   "ast": {
-    "absolutePath": "/Users/glads/src/bndes/rbb-notarizer/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol",
+    "absolutePath": "/Users/glads/src/bndes/rbb-notarizacao/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol",
     "exportedSymbols": {
       "BNDESPublicTenderNotarizer": [
         129
@@ -143,12 +143,12 @@
         "src": "31:33:0"
       },
       {
-        "absolutePath": "/Users/glads/src/bndes/rbb-notarizer/back-blockchain/contracts/RBBRegistry.sol",
+        "absolutePath": "/Users/glads/src/bndes/rbb-notarizacao/back-blockchain/contracts/RBBRegistry.sol",
         "file": "./RBBRegistry.sol",
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 130,
-        "sourceUnit": 331,
+        "sourceUnit": 478,
         "src": "66:27:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -176,7 +176,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_RBBRegistry_$330",
+              "typeIdentifier": "t_contract$_RBBRegistry_$477",
               "typeString": "contract RBBRegistry"
             },
             "typeName": {
@@ -184,10 +184,10 @@
               "id": 3,
               "name": "RBBRegistry",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 330,
+              "referencedDeclaration": 477,
               "src": "138:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                "typeIdentifier": "t_contract$_RBBRegistry_$477",
                 "typeString": "contract RBBRegistry"
               }
             },
@@ -230,21 +230,21 @@
                 "name": "documentListHash",
                 "nodeType": "VariableDeclaration",
                 "scope": 13,
-                "src": "233:24:0",
+                "src": "233:25:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_bytes32",
-                  "typeString": "bytes32"
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
                 },
                 "typeName": {
                   "id": 7,
-                  "name": "bytes32",
+                  "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "233:7:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   }
                 },
                 "value": null,
@@ -256,7 +256,7 @@
                 "name": "lastNotarizationDate",
                 "nodeType": "VariableDeclaration",
                 "scope": 13,
-                "src": "267:28:0",
+                "src": "268:28:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -267,7 +267,7 @@
                   "id": 9,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "267:4:0",
+                  "src": "268:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -282,7 +282,7 @@
                 "name": "version",
                 "nodeType": "VariableDeclaration",
                 "scope": 13,
-                "src": "305:15:0",
+                "src": "306:15:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -293,7 +293,7 @@
                   "id": 11,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "305:4:0",
+                  "src": "306:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -306,7 +306,7 @@
             "name": "NotarizedPublicTender",
             "nodeType": "StructDefinition",
             "scope": 129,
-            "src": "190:137:0",
+            "src": "190:138:0",
             "visibility": "public"
           },
           {
@@ -315,7 +315,7 @@
             "name": "notarizedPublicTender",
             "nodeType": "VariableDeclaration",
             "scope": 129,
-            "src": "380:68:0",
+            "src": "381:68:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -328,14 +328,14 @@
                 "id": 14,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "389:4:0",
+                "src": "390:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "380:39:0",
+              "src": "381:39:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                 "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender)"
@@ -346,7 +346,7 @@
                 "name": "NotarizedPublicTender",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 13,
-                "src": "397:21:0",
+                "src": "398:21:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage_ptr",
                   "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender"
@@ -373,7 +373,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 27,
-                  "src": "585:4:0",
+                  "src": "586:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -384,7 +384,7 @@
                     "id": 18,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "585:4:0",
+                    "src": "586:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -400,21 +400,21 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 27,
-                  "src": "591:7:0",
+                  "src": "592:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   },
                   "typeName": {
                     "id": 20,
-                    "name": "bytes32",
+                    "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "591:7:0",
+                    "src": "592:7:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
                   "value": null,
@@ -427,7 +427,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 27,
-                  "src": "600:4:0",
+                  "src": "601:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -438,7 +438,7 @@
                     "id": 22,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "600:4:0",
+                    "src": "601:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -454,7 +454,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 27,
-                  "src": "606:4:0",
+                  "src": "607:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -465,7 +465,7 @@
                     "id": 24,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "606:4:0",
+                    "src": "607:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -475,15 +475,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "584:27:0"
+              "src": "585:27:0"
             },
-            "src": "557:55:0"
+            "src": "558:55:0"
           },
           {
             "body": {
               "id": 41,
               "nodeType": "Block",
-              "src": "642:125:0",
+              "src": "643:125:0",
               "statements": [
                 {
                   "expression": {
@@ -511,8 +511,8 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 345,
-                                "src": "675:3:0",
+                                "referencedDeclaration": 492,
+                                "src": "676:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
@@ -526,7 +526,7 @@
                               "memberName": "sender",
                               "nodeType": "MemberAccess",
                               "referencedDeclaration": null,
-                              "src": "675:10:0",
+                              "src": "676:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address_payable",
                                 "typeString": "address payable"
@@ -547,9 +547,9 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 4,
-                              "src": "660:8:0",
+                              "src": "661:8:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                                "typeIdentifier": "t_contract$_RBBRegistry_$477",
                                 "typeString": "contract RBBRegistry"
                               }
                             },
@@ -560,8 +560,8 @@
                             "lValueRequested": false,
                             "memberName": "getId",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 329,
-                            "src": "660:14:0",
+                            "referencedDeclaration": 476,
+                            "src": "661:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
                               "typeString": "function (address) view external returns (uint256)"
@@ -575,7 +575,7 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "660:26:0",
+                          "src": "661:26:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -590,13 +590,13 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 6,
-                          "src": "690:7:0",
+                          "src": "691:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "660:37:0",
+                        "src": "661:37:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -612,7 +612,7 @@
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "699:49:0",
+                        "src": "700:49:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_a600b73072face5abc4aeace78babf7a642a9967a0adc3cca6e2e29997811cf8",
@@ -636,11 +636,11 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        348,
-                        349
+                        495,
+                        496
                       ],
-                      "referencedDeclaration": 349,
-                      "src": "652:7:0",
+                      "referencedDeclaration": 496,
+                      "src": "653:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -654,7 +654,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "652:97:0",
+                    "src": "653:97:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -662,12 +662,12 @@
                   },
                   "id": 39,
                   "nodeType": "ExpressionStatement",
-                  "src": "652:97:0"
+                  "src": "653:97:0"
                 },
                 {
                   "id": 40,
                   "nodeType": "PlaceholderStatement",
-                  "src": "759:1:0"
+                  "src": "760:1:0"
                 }
               ]
             },
@@ -679,16 +679,16 @@
               "id": 28,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "642:0:0"
+              "src": "643:0:0"
             },
-            "src": "618:149:0",
+            "src": "619:149:0",
             "visibility": "internal"
           },
           {
             "body": {
               "id": 61,
               "nodeType": "Block",
-              "src": "819:100:0",
+              "src": "820:100:0",
               "statements": [
                 {
                   "expression": {
@@ -705,9 +705,9 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 4,
-                      "src": "829:8:0",
+                      "src": "830:8:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                        "typeIdentifier": "t_contract$_RBBRegistry_$477",
                         "typeString": "contract RBBRegistry"
                       }
                     },
@@ -723,7 +723,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 44,
-                          "src": "852:12:0",
+                          "src": "853:12:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -741,10 +741,10 @@
                         "name": "RBBRegistry",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 330,
-                        "src": "840:11:0",
+                        "referencedDeclaration": 477,
+                        "src": "841:11:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_RBBRegistry_$330_$",
+                          "typeIdentifier": "t_type$_t_contract$_RBBRegistry_$477_$",
                           "typeString": "type(contract RBBRegistry)"
                         }
                       },
@@ -756,21 +756,21 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "840:25:0",
+                      "src": "841:25:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                        "typeIdentifier": "t_contract$_RBBRegistry_$477",
                         "typeString": "contract RBBRegistry"
                       }
                     },
-                    "src": "829:36:0",
+                    "src": "830:36:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                      "typeIdentifier": "t_contract$_RBBRegistry_$477",
                       "typeString": "contract RBBRegistry"
                     }
                   },
                   "id": 52,
                   "nodeType": "ExpressionStatement",
-                  "src": "829:36:0"
+                  "src": "830:36:0"
                 },
                 {
                   "expression": {
@@ -787,7 +787,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 6,
-                      "src": "875:7:0",
+                      "src": "876:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -806,8 +806,8 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 345,
-                            "src": "900:3:0",
+                            "referencedDeclaration": 492,
+                            "src": "901:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
@@ -821,7 +821,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "900:10:0",
+                          "src": "901:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -842,9 +842,9 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 4,
-                          "src": "885:8:0",
+                          "src": "886:8:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                            "typeIdentifier": "t_contract$_RBBRegistry_$477",
                             "typeString": "contract RBBRegistry"
                           }
                         },
@@ -855,8 +855,8 @@
                         "lValueRequested": false,
                         "memberName": "getId",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 329,
-                        "src": "885:14:0",
+                        "referencedDeclaration": 476,
+                        "src": "886:14:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
                           "typeString": "function (address) view external returns (uint256)"
@@ -870,13 +870,13 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "885:26:0",
+                      "src": "886:26:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "875:36:0",
+                    "src": "876:36:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -884,7 +884,7 @@
                   },
                   "id": 60,
                   "nodeType": "ExpressionStatement",
-                  "src": "875:36:0"
+                  "src": "876:36:0"
                 }
               ]
             },
@@ -905,7 +905,7 @@
                   "name": "registryAddr",
                   "nodeType": "VariableDeclaration",
                   "scope": 62,
-                  "src": "786:20:0",
+                  "src": "787:20:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -916,7 +916,7 @@
                     "id": 43,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "786:7:0",
+                    "src": "787:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -927,16 +927,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "785:22:0"
+              "src": "786:22:0"
             },
             "returnParameters": {
               "id": 46,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "819:0:0"
+              "src": "820:0:0"
             },
             "scope": 129,
-            "src": "773:146:0",
+            "src": "774:146:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -945,14 +945,14 @@
             "body": {
               "id": 127,
               "nodeType": "Block",
-              "src": "1033:799:0",
+              "src": "1035:799:0",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     },
                     "id": 76,
                     "isConstant": false,
@@ -970,7 +970,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 17,
-                          "src": "1111:21:0",
+                          "src": "1113:21:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                             "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -984,7 +984,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 64,
-                          "src": "1133:14:0",
+                          "src": "1135:14:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -995,7 +995,7 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "1111:37:0",
+                        "src": "1113:37:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                           "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1009,10 +1009,10 @@
                       "memberName": "documentListHash",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 8,
-                      "src": "1111:54:0",
+                      "src": "1113:54:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bytes32",
-                        "typeString": "bytes32"
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
                       }
                     },
                     "nodeType": "BinaryOperation",
@@ -1027,7 +1027,7 @@
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1169:1:0",
+                      "src": "1171:1:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
@@ -1035,7 +1035,7 @@
                       },
                       "value": "0"
                     },
-                    "src": "1111:59:0",
+                    "src": "1113:59:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1044,7 +1044,7 @@
                   "falseBody": {
                     "id": 109,
                     "nodeType": "Block",
-                    "src": "1331:240:0",
+                    "src": "1333:240:0",
                     "statements": [
                       {
                         "expression": {
@@ -1065,7 +1065,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 17,
-                                "src": "1345:21:0",
+                                "src": "1347:21:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                                   "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -1079,7 +1079,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 64,
-                                "src": "1367:14:0",
+                                "src": "1369:14:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -1090,7 +1090,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "1345:37:0",
+                              "src": "1347:37:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                                 "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1104,10 +1104,10 @@
                             "memberName": "documentListHash",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 8,
-                            "src": "1345:54:0",
+                            "src": "1347:54:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_bytes32",
-                              "typeString": "bytes32"
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
                             }
                           },
                           "nodeType": "Assignment",
@@ -1119,21 +1119,21 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 66,
-                            "src": "1402:16:0",
+                            "src": "1404:16:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_bytes32",
-                              "typeString": "bytes32"
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
                             }
                           },
-                          "src": "1345:73:0",
+                          "src": "1347:73:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_bytes32",
-                            "typeString": "bytes32"
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
                           }
                         },
                         "id": 94,
                         "nodeType": "ExpressionStatement",
-                        "src": "1345:73:0"
+                        "src": "1347:73:0"
                       },
                       {
                         "expression": {
@@ -1154,7 +1154,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 17,
-                                "src": "1432:21:0",
+                                "src": "1434:21:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                                   "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -1168,7 +1168,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 64,
-                                "src": "1454:14:0",
+                                "src": "1456:14:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -1179,7 +1179,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "1432:37:0",
+                              "src": "1434:37:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                                 "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1193,7 +1193,7 @@
                             "memberName": "lastNotarizationDate",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 10,
-                            "src": "1432:58:0",
+                            "src": "1434:58:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1207,14 +1207,14 @@
                             "name": "now",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 347,
-                            "src": "1493:3:0",
+                            "referencedDeclaration": 494,
+                            "src": "1495:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             }
                           },
-                          "src": "1432:64:0",
+                          "src": "1434:64:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1222,7 +1222,7 @@
                         },
                         "id": 101,
                         "nodeType": "ExpressionStatement",
-                        "src": "1432:64:0"
+                        "src": "1434:64:0"
                       },
                       {
                         "expression": {
@@ -1243,7 +1243,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 17,
-                                "src": "1510:21:0",
+                                "src": "1512:21:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                                   "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -1257,7 +1257,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 64,
-                                "src": "1532:14:0",
+                                "src": "1534:14:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -1268,7 +1268,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "1510:37:0",
+                              "src": "1512:37:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                                 "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1282,7 +1282,7 @@
                             "memberName": "version",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 12,
-                            "src": "1510:45:0",
+                            "src": "1512:45:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1300,7 +1300,7 @@
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "1559:1:0",
+                            "src": "1561:1:0",
                             "subdenomination": null,
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_1_by_1",
@@ -1308,7 +1308,7 @@
                             },
                             "value": "1"
                           },
-                          "src": "1510:50:0",
+                          "src": "1512:50:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1316,17 +1316,17 @@
                         },
                         "id": 108,
                         "nodeType": "ExpressionStatement",
-                        "src": "1510:50:0"
+                        "src": "1512:50:0"
                       }
                     ]
                   },
                   "id": 110,
                   "nodeType": "IfStatement",
-                  "src": "1107:464:0",
+                  "src": "1109:464:0",
                   "trueBody": {
                     "id": 87,
                     "nodeType": "Block",
-                    "src": "1180:129:0",
+                    "src": "1182:129:0",
                     "statements": [
                       {
                         "expression": {
@@ -1345,7 +1345,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 17,
-                              "src": "1194:21:0",
+                              "src": "1196:21:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                                 "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -1359,7 +1359,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 64,
-                              "src": "1216:14:0",
+                              "src": "1218:14:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -1370,7 +1370,7 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "1194:37:0",
+                            "src": "1196:37:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                               "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1388,10 +1388,10 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 66,
-                                "src": "1273:16:0",
+                                "src": "1275:16:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_bytes32",
-                                  "typeString": "bytes32"
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
                                 }
                               },
                               {
@@ -1400,8 +1400,8 @@
                                 "name": "now",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 347,
-                                "src": "1291:3:0",
+                                "referencedDeclaration": 494,
+                                "src": "1293:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -1417,7 +1417,7 @@
                                 "kind": "number",
                                 "lValueRequested": false,
                                 "nodeType": "Literal",
-                                "src": "1296:1:0",
+                                "src": "1298:1:0",
                                 "subdenomination": null,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_rational_1_by_1",
@@ -1429,8 +1429,8 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_bytes32",
-                                  "typeString": "bytes32"
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
                                 },
                                 {
                                   "typeIdentifier": "t_uint256",
@@ -1446,7 +1446,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 13,
-                              "src": "1251:21:0",
+                              "src": "1253:21:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_struct$_NotarizedPublicTender_$13_storage_ptr_$",
                                 "typeString": "type(struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage pointer)"
@@ -1460,13 +1460,13 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "1251:47:0",
+                            "src": "1253:47:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_memory",
                               "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender memory"
                             }
                           },
-                          "src": "1194:104:0",
+                          "src": "1196:104:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                             "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1474,7 +1474,7 @@
                         },
                         "id": 86,
                         "nodeType": "ExpressionStatement",
-                        "src": "1194:104:0"
+                        "src": "1196:104:0"
                       }
                     ]
                   }
@@ -1490,7 +1490,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 64,
-                        "src": "1608:14:0",
+                        "src": "1610:14:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1507,7 +1507,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 17,
-                            "src": "1637:21:0",
+                            "src": "1639:21:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                               "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -1521,7 +1521,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 64,
-                            "src": "1659:14:0",
+                            "src": "1661:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1532,7 +1532,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1637:37:0",
+                          "src": "1639:37:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                             "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1546,10 +1546,10 @@
                         "memberName": "documentListHash",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 8,
-                        "src": "1637:54:0",
+                        "src": "1639:54:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_bytes32",
-                          "typeString": "bytes32"
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
                         }
                       },
                       {
@@ -1563,7 +1563,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 17,
-                            "src": "1706:21:0",
+                            "src": "1708:21:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                               "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -1577,7 +1577,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 64,
-                            "src": "1728:14:0",
+                            "src": "1730:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1588,7 +1588,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1706:37:0",
+                          "src": "1708:37:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                             "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1602,7 +1602,7 @@
                         "memberName": "lastNotarizationDate",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 10,
-                        "src": "1706:58:0",
+                        "src": "1708:58:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1619,7 +1619,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 17,
-                            "src": "1779:21:0",
+                            "src": "1781:21:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                               "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -1633,7 +1633,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 64,
-                            "src": "1801:14:0",
+                            "src": "1803:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1644,7 +1644,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1779:37:0",
+                          "src": "1781:37:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                             "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -1658,7 +1658,7 @@
                         "memberName": "version",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 12,
-                        "src": "1779:45:0",
+                        "src": "1781:45:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1672,8 +1672,8 @@
                           "typeString": "uint256"
                         },
                         {
-                          "typeIdentifier": "t_bytes32",
-                          "typeString": "bytes32"
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
                         },
                         {
                           "typeIdentifier": "t_uint256",
@@ -1689,10 +1689,10 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 27,
-                      "src": "1586:21:0",
+                      "src": "1588:21:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_bytes32_$_t_uint256_$_t_uint256_$returns$__$",
-                        "typeString": "function (uint256,bytes32,uint256,uint256)"
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,uint256,uint256)"
                       }
                     },
                     "id": 125,
@@ -1703,7 +1703,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1586:239:0",
+                    "src": "1588:239:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1711,7 +1711,7 @@
                   },
                   "id": 126,
                   "nodeType": "EmitStatement",
-                  "src": "1581:244:0"
+                  "src": "1583:244:0"
                 }
               ]
             },
@@ -1730,14 +1730,14 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 42,
-                  "src": "1019:9:0",
+                  "src": "1021:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1019:9:0"
+                "src": "1021:9:0"
               }
             ],
             "name": "notarizePublicTender",
@@ -1752,7 +1752,7 @@
                   "name": "publicTenderId",
                   "nodeType": "VariableDeclaration",
                   "scope": 128,
-                  "src": "956:19:0",
+                  "src": "957:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1763,7 +1763,7 @@
                     "id": 63,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "956:4:0",
+                    "src": "957:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1778,50 +1778,50 @@
                   "name": "documentListHash",
                   "nodeType": "VariableDeclaration",
                   "scope": 128,
-                  "src": "977:24:0",
+                  "src": "978:25:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   },
                   "typeName": {
                     "id": 65,
-                    "name": "bytes32",
+                    "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "977:7:0",
+                    "src": "978:7:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "955:47:0"
+              "src": "956:48:0"
             },
             "returnParameters": {
               "id": 70,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1033:0:0"
+              "src": "1035:0:0"
             },
             "scope": 129,
-            "src": "925:907:0",
+            "src": "926:908:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 130,
-        "src": "95:1739:0"
+        "src": "95:1741:0"
       }
     ],
-    "src": "31:1803:0"
+    "src": "31:1805:0"
   },
   "legacyAST": {
-    "absolutePath": "/Users/glads/src/bndes/rbb-notarizer/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol",
+    "absolutePath": "/Users/glads/src/bndes/rbb-notarizacao/back-blockchain/contracts/BNDESPublicTenderNotarizer.sol",
     "exportedSymbols": {
       "BNDESPublicTenderNotarizer": [
         129
@@ -1845,12 +1845,12 @@
         "src": "31:33:0"
       },
       {
-        "absolutePath": "/Users/glads/src/bndes/rbb-notarizer/back-blockchain/contracts/RBBRegistry.sol",
+        "absolutePath": "/Users/glads/src/bndes/rbb-notarizacao/back-blockchain/contracts/RBBRegistry.sol",
         "file": "./RBBRegistry.sol",
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 130,
-        "sourceUnit": 331,
+        "sourceUnit": 478,
         "src": "66:27:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1878,7 +1878,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_RBBRegistry_$330",
+              "typeIdentifier": "t_contract$_RBBRegistry_$477",
               "typeString": "contract RBBRegistry"
             },
             "typeName": {
@@ -1886,10 +1886,10 @@
               "id": 3,
               "name": "RBBRegistry",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 330,
+              "referencedDeclaration": 477,
               "src": "138:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                "typeIdentifier": "t_contract$_RBBRegistry_$477",
                 "typeString": "contract RBBRegistry"
               }
             },
@@ -1932,21 +1932,21 @@
                 "name": "documentListHash",
                 "nodeType": "VariableDeclaration",
                 "scope": 13,
-                "src": "233:24:0",
+                "src": "233:25:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_bytes32",
-                  "typeString": "bytes32"
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
                 },
                 "typeName": {
                   "id": 7,
-                  "name": "bytes32",
+                  "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "233:7:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   }
                 },
                 "value": null,
@@ -1958,7 +1958,7 @@
                 "name": "lastNotarizationDate",
                 "nodeType": "VariableDeclaration",
                 "scope": 13,
-                "src": "267:28:0",
+                "src": "268:28:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1969,7 +1969,7 @@
                   "id": 9,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "267:4:0",
+                  "src": "268:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -1984,7 +1984,7 @@
                 "name": "version",
                 "nodeType": "VariableDeclaration",
                 "scope": 13,
-                "src": "305:15:0",
+                "src": "306:15:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1995,7 +1995,7 @@
                   "id": 11,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "305:4:0",
+                  "src": "306:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -2008,7 +2008,7 @@
             "name": "NotarizedPublicTender",
             "nodeType": "StructDefinition",
             "scope": 129,
-            "src": "190:137:0",
+            "src": "190:138:0",
             "visibility": "public"
           },
           {
@@ -2017,7 +2017,7 @@
             "name": "notarizedPublicTender",
             "nodeType": "VariableDeclaration",
             "scope": 129,
-            "src": "380:68:0",
+            "src": "381:68:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -2030,14 +2030,14 @@
                 "id": 14,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "389:4:0",
+                "src": "390:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "380:39:0",
+              "src": "381:39:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                 "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender)"
@@ -2048,7 +2048,7 @@
                 "name": "NotarizedPublicTender",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 13,
-                "src": "397:21:0",
+                "src": "398:21:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage_ptr",
                   "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender"
@@ -2075,7 +2075,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 27,
-                  "src": "585:4:0",
+                  "src": "586:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2086,7 +2086,7 @@
                     "id": 18,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "585:4:0",
+                    "src": "586:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2102,21 +2102,21 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 27,
-                  "src": "591:7:0",
+                  "src": "592:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   },
                   "typeName": {
                     "id": 20,
-                    "name": "bytes32",
+                    "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "591:7:0",
+                    "src": "592:7:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
                   "value": null,
@@ -2129,7 +2129,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 27,
-                  "src": "600:4:0",
+                  "src": "601:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2140,7 +2140,7 @@
                     "id": 22,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "600:4:0",
+                    "src": "601:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2156,7 +2156,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 27,
-                  "src": "606:4:0",
+                  "src": "607:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2167,7 +2167,7 @@
                     "id": 24,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "606:4:0",
+                    "src": "607:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2177,15 +2177,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "584:27:0"
+              "src": "585:27:0"
             },
-            "src": "557:55:0"
+            "src": "558:55:0"
           },
           {
             "body": {
               "id": 41,
               "nodeType": "Block",
-              "src": "642:125:0",
+              "src": "643:125:0",
               "statements": [
                 {
                   "expression": {
@@ -2213,8 +2213,8 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 345,
-                                "src": "675:3:0",
+                                "referencedDeclaration": 492,
+                                "src": "676:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
@@ -2228,7 +2228,7 @@
                               "memberName": "sender",
                               "nodeType": "MemberAccess",
                               "referencedDeclaration": null,
-                              "src": "675:10:0",
+                              "src": "676:10:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address_payable",
                                 "typeString": "address payable"
@@ -2249,9 +2249,9 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 4,
-                              "src": "660:8:0",
+                              "src": "661:8:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                                "typeIdentifier": "t_contract$_RBBRegistry_$477",
                                 "typeString": "contract RBBRegistry"
                               }
                             },
@@ -2262,8 +2262,8 @@
                             "lValueRequested": false,
                             "memberName": "getId",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 329,
-                            "src": "660:14:0",
+                            "referencedDeclaration": 476,
+                            "src": "661:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
                               "typeString": "function (address) view external returns (uint256)"
@@ -2277,7 +2277,7 @@
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "660:26:0",
+                          "src": "661:26:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -2292,13 +2292,13 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 6,
-                          "src": "690:7:0",
+                          "src": "691:7:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "660:37:0",
+                        "src": "661:37:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -2314,7 +2314,7 @@
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "699:49:0",
+                        "src": "700:49:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_a600b73072face5abc4aeace78babf7a642a9967a0adc3cca6e2e29997811cf8",
@@ -2338,11 +2338,11 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        348,
-                        349
+                        495,
+                        496
                       ],
-                      "referencedDeclaration": 349,
-                      "src": "652:7:0",
+                      "referencedDeclaration": 496,
+                      "src": "653:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -2356,7 +2356,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "652:97:0",
+                    "src": "653:97:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -2364,12 +2364,12 @@
                   },
                   "id": 39,
                   "nodeType": "ExpressionStatement",
-                  "src": "652:97:0"
+                  "src": "653:97:0"
                 },
                 {
                   "id": 40,
                   "nodeType": "PlaceholderStatement",
-                  "src": "759:1:0"
+                  "src": "760:1:0"
                 }
               ]
             },
@@ -2381,16 +2381,16 @@
               "id": 28,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "642:0:0"
+              "src": "643:0:0"
             },
-            "src": "618:149:0",
+            "src": "619:149:0",
             "visibility": "internal"
           },
           {
             "body": {
               "id": 61,
               "nodeType": "Block",
-              "src": "819:100:0",
+              "src": "820:100:0",
               "statements": [
                 {
                   "expression": {
@@ -2407,9 +2407,9 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 4,
-                      "src": "829:8:0",
+                      "src": "830:8:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                        "typeIdentifier": "t_contract$_RBBRegistry_$477",
                         "typeString": "contract RBBRegistry"
                       }
                     },
@@ -2425,7 +2425,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 44,
-                          "src": "852:12:0",
+                          "src": "853:12:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -2443,10 +2443,10 @@
                         "name": "RBBRegistry",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 330,
-                        "src": "840:11:0",
+                        "referencedDeclaration": 477,
+                        "src": "841:11:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_RBBRegistry_$330_$",
+                          "typeIdentifier": "t_type$_t_contract$_RBBRegistry_$477_$",
                           "typeString": "type(contract RBBRegistry)"
                         }
                       },
@@ -2458,21 +2458,21 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "840:25:0",
+                      "src": "841:25:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                        "typeIdentifier": "t_contract$_RBBRegistry_$477",
                         "typeString": "contract RBBRegistry"
                       }
                     },
-                    "src": "829:36:0",
+                    "src": "830:36:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                      "typeIdentifier": "t_contract$_RBBRegistry_$477",
                       "typeString": "contract RBBRegistry"
                     }
                   },
                   "id": 52,
                   "nodeType": "ExpressionStatement",
-                  "src": "829:36:0"
+                  "src": "830:36:0"
                 },
                 {
                   "expression": {
@@ -2489,7 +2489,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 6,
-                      "src": "875:7:0",
+                      "src": "876:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -2508,8 +2508,8 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 345,
-                            "src": "900:3:0",
+                            "referencedDeclaration": 492,
+                            "src": "901:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
@@ -2523,7 +2523,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "900:10:0",
+                          "src": "901:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -2544,9 +2544,9 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 4,
-                          "src": "885:8:0",
+                          "src": "886:8:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_RBBRegistry_$330",
+                            "typeIdentifier": "t_contract$_RBBRegistry_$477",
                             "typeString": "contract RBBRegistry"
                           }
                         },
@@ -2557,8 +2557,8 @@
                         "lValueRequested": false,
                         "memberName": "getId",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 329,
-                        "src": "885:14:0",
+                        "referencedDeclaration": 476,
+                        "src": "886:14:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
                           "typeString": "function (address) view external returns (uint256)"
@@ -2572,13 +2572,13 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "885:26:0",
+                      "src": "886:26:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "875:36:0",
+                    "src": "876:36:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2586,7 +2586,7 @@
                   },
                   "id": 60,
                   "nodeType": "ExpressionStatement",
-                  "src": "875:36:0"
+                  "src": "876:36:0"
                 }
               ]
             },
@@ -2607,7 +2607,7 @@
                   "name": "registryAddr",
                   "nodeType": "VariableDeclaration",
                   "scope": 62,
-                  "src": "786:20:0",
+                  "src": "787:20:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2618,7 +2618,7 @@
                     "id": 43,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "786:7:0",
+                    "src": "787:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2629,16 +2629,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "785:22:0"
+              "src": "786:22:0"
             },
             "returnParameters": {
               "id": 46,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "819:0:0"
+              "src": "820:0:0"
             },
             "scope": 129,
-            "src": "773:146:0",
+            "src": "774:146:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -2647,14 +2647,14 @@
             "body": {
               "id": 127,
               "nodeType": "Block",
-              "src": "1033:799:0",
+              "src": "1035:799:0",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     },
                     "id": 76,
                     "isConstant": false,
@@ -2672,7 +2672,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 17,
-                          "src": "1111:21:0",
+                          "src": "1113:21:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                             "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -2686,7 +2686,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 64,
-                          "src": "1133:14:0",
+                          "src": "1135:14:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -2697,7 +2697,7 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "1111:37:0",
+                        "src": "1113:37:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                           "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -2711,10 +2711,10 @@
                       "memberName": "documentListHash",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 8,
-                      "src": "1111:54:0",
+                      "src": "1113:54:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bytes32",
-                        "typeString": "bytes32"
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
                       }
                     },
                     "nodeType": "BinaryOperation",
@@ -2729,7 +2729,7 @@
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1169:1:0",
+                      "src": "1171:1:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
@@ -2737,7 +2737,7 @@
                       },
                       "value": "0"
                     },
-                    "src": "1111:59:0",
+                    "src": "1113:59:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2746,7 +2746,7 @@
                   "falseBody": {
                     "id": 109,
                     "nodeType": "Block",
-                    "src": "1331:240:0",
+                    "src": "1333:240:0",
                     "statements": [
                       {
                         "expression": {
@@ -2767,7 +2767,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 17,
-                                "src": "1345:21:0",
+                                "src": "1347:21:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                                   "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -2781,7 +2781,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 64,
-                                "src": "1367:14:0",
+                                "src": "1369:14:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -2792,7 +2792,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "1345:37:0",
+                              "src": "1347:37:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                                 "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -2806,10 +2806,10 @@
                             "memberName": "documentListHash",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 8,
-                            "src": "1345:54:0",
+                            "src": "1347:54:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_bytes32",
-                              "typeString": "bytes32"
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
                             }
                           },
                           "nodeType": "Assignment",
@@ -2821,21 +2821,21 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 66,
-                            "src": "1402:16:0",
+                            "src": "1404:16:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_bytes32",
-                              "typeString": "bytes32"
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
                             }
                           },
-                          "src": "1345:73:0",
+                          "src": "1347:73:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_bytes32",
-                            "typeString": "bytes32"
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
                           }
                         },
                         "id": 94,
                         "nodeType": "ExpressionStatement",
-                        "src": "1345:73:0"
+                        "src": "1347:73:0"
                       },
                       {
                         "expression": {
@@ -2856,7 +2856,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 17,
-                                "src": "1432:21:0",
+                                "src": "1434:21:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                                   "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -2870,7 +2870,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 64,
-                                "src": "1454:14:0",
+                                "src": "1456:14:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -2881,7 +2881,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "1432:37:0",
+                              "src": "1434:37:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                                 "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -2895,7 +2895,7 @@
                             "memberName": "lastNotarizationDate",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 10,
-                            "src": "1432:58:0",
+                            "src": "1434:58:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -2909,14 +2909,14 @@
                             "name": "now",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 347,
-                            "src": "1493:3:0",
+                            "referencedDeclaration": 494,
+                            "src": "1495:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             }
                           },
-                          "src": "1432:64:0",
+                          "src": "1434:64:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -2924,7 +2924,7 @@
                         },
                         "id": 101,
                         "nodeType": "ExpressionStatement",
-                        "src": "1432:64:0"
+                        "src": "1434:64:0"
                       },
                       {
                         "expression": {
@@ -2945,7 +2945,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 17,
-                                "src": "1510:21:0",
+                                "src": "1512:21:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                                   "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -2959,7 +2959,7 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 64,
-                                "src": "1532:14:0",
+                                "src": "1534:14:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -2970,7 +2970,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "1510:37:0",
+                              "src": "1512:37:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                                 "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -2984,7 +2984,7 @@
                             "memberName": "version",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 12,
-                            "src": "1510:45:0",
+                            "src": "1512:45:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -3002,7 +3002,7 @@
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "1559:1:0",
+                            "src": "1561:1:0",
                             "subdenomination": null,
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_1_by_1",
@@ -3010,7 +3010,7 @@
                             },
                             "value": "1"
                           },
-                          "src": "1510:50:0",
+                          "src": "1512:50:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -3018,17 +3018,17 @@
                         },
                         "id": 108,
                         "nodeType": "ExpressionStatement",
-                        "src": "1510:50:0"
+                        "src": "1512:50:0"
                       }
                     ]
                   },
                   "id": 110,
                   "nodeType": "IfStatement",
-                  "src": "1107:464:0",
+                  "src": "1109:464:0",
                   "trueBody": {
                     "id": 87,
                     "nodeType": "Block",
-                    "src": "1180:129:0",
+                    "src": "1182:129:0",
                     "statements": [
                       {
                         "expression": {
@@ -3047,7 +3047,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 17,
-                              "src": "1194:21:0",
+                              "src": "1196:21:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                                 "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -3061,7 +3061,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 64,
-                              "src": "1216:14:0",
+                              "src": "1218:14:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -3072,7 +3072,7 @@
                             "isPure": false,
                             "lValueRequested": true,
                             "nodeType": "IndexAccess",
-                            "src": "1194:37:0",
+                            "src": "1196:37:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                               "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -3090,10 +3090,10 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 66,
-                                "src": "1273:16:0",
+                                "src": "1275:16:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_bytes32",
-                                  "typeString": "bytes32"
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
                                 }
                               },
                               {
@@ -3102,8 +3102,8 @@
                                 "name": "now",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 347,
-                                "src": "1291:3:0",
+                                "referencedDeclaration": 494,
+                                "src": "1293:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -3119,7 +3119,7 @@
                                 "kind": "number",
                                 "lValueRequested": false,
                                 "nodeType": "Literal",
-                                "src": "1296:1:0",
+                                "src": "1298:1:0",
                                 "subdenomination": null,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_rational_1_by_1",
@@ -3131,8 +3131,8 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_bytes32",
-                                  "typeString": "bytes32"
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
                                 },
                                 {
                                   "typeIdentifier": "t_uint256",
@@ -3148,7 +3148,7 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 13,
-                              "src": "1251:21:0",
+                              "src": "1253:21:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_struct$_NotarizedPublicTender_$13_storage_ptr_$",
                                 "typeString": "type(struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage pointer)"
@@ -3162,13 +3162,13 @@
                             "lValueRequested": false,
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "1251:47:0",
+                            "src": "1253:47:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_memory",
                               "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender memory"
                             }
                           },
-                          "src": "1194:104:0",
+                          "src": "1196:104:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                             "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -3176,7 +3176,7 @@
                         },
                         "id": 86,
                         "nodeType": "ExpressionStatement",
-                        "src": "1194:104:0"
+                        "src": "1196:104:0"
                       }
                     ]
                   }
@@ -3192,7 +3192,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 64,
-                        "src": "1608:14:0",
+                        "src": "1610:14:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3209,7 +3209,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 17,
-                            "src": "1637:21:0",
+                            "src": "1639:21:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                               "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -3223,7 +3223,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 64,
-                            "src": "1659:14:0",
+                            "src": "1661:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -3234,7 +3234,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1637:37:0",
+                          "src": "1639:37:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                             "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -3248,10 +3248,10 @@
                         "memberName": "documentListHash",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 8,
-                        "src": "1637:54:0",
+                        "src": "1639:54:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_bytes32",
-                          "typeString": "bytes32"
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
                         }
                       },
                       {
@@ -3265,7 +3265,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 17,
-                            "src": "1706:21:0",
+                            "src": "1708:21:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                               "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -3279,7 +3279,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 64,
-                            "src": "1728:14:0",
+                            "src": "1730:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -3290,7 +3290,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1706:37:0",
+                          "src": "1708:37:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                             "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -3304,7 +3304,7 @@
                         "memberName": "lastNotarizationDate",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 10,
-                        "src": "1706:58:0",
+                        "src": "1708:58:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3321,7 +3321,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 17,
-                            "src": "1779:21:0",
+                            "src": "1781:21:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_NotarizedPublicTender_$13_storage_$",
                               "typeString": "mapping(uint256 => struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref)"
@@ -3335,7 +3335,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 64,
-                            "src": "1801:14:0",
+                            "src": "1803:14:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -3346,7 +3346,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1779:37:0",
+                          "src": "1781:37:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_NotarizedPublicTender_$13_storage",
                             "typeString": "struct BNDESPublicTenderNotarizer.NotarizedPublicTender storage ref"
@@ -3360,7 +3360,7 @@
                         "memberName": "version",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 12,
-                        "src": "1779:45:0",
+                        "src": "1781:45:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3374,8 +3374,8 @@
                           "typeString": "uint256"
                         },
                         {
-                          "typeIdentifier": "t_bytes32",
-                          "typeString": "bytes32"
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
                         },
                         {
                           "typeIdentifier": "t_uint256",
@@ -3391,10 +3391,10 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 27,
-                      "src": "1586:21:0",
+                      "src": "1588:21:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_bytes32_$_t_uint256_$_t_uint256_$returns$__$",
-                        "typeString": "function (uint256,bytes32,uint256,uint256)"
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,uint256,uint256)"
                       }
                     },
                     "id": 125,
@@ -3405,7 +3405,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1586:239:0",
+                    "src": "1588:239:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -3413,7 +3413,7 @@
                   },
                   "id": 126,
                   "nodeType": "EmitStatement",
-                  "src": "1581:244:0"
+                  "src": "1583:244:0"
                 }
               ]
             },
@@ -3432,14 +3432,14 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 42,
-                  "src": "1019:9:0",
+                  "src": "1021:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1019:9:0"
+                "src": "1021:9:0"
               }
             ],
             "name": "notarizePublicTender",
@@ -3454,7 +3454,7 @@
                   "name": "publicTenderId",
                   "nodeType": "VariableDeclaration",
                   "scope": 128,
-                  "src": "956:19:0",
+                  "src": "957:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3465,7 +3465,7 @@
                     "id": 63,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "956:4:0",
+                    "src": "957:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3480,47 +3480,47 @@
                   "name": "documentListHash",
                   "nodeType": "VariableDeclaration",
                   "scope": 128,
-                  "src": "977:24:0",
+                  "src": "978:25:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   },
                   "typeName": {
                     "id": 65,
-                    "name": "bytes32",
+                    "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "977:7:0",
+                    "src": "978:7:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "955:47:0"
+              "src": "956:48:0"
             },
             "returnParameters": {
               "id": 70,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1033:0:0"
+              "src": "1035:0:0"
             },
             "scope": 129,
-            "src": "925:907:0",
+            "src": "926:908:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 130,
-        "src": "95:1739:0"
+        "src": "95:1741:0"
       }
     ],
-    "src": "31:1803:0"
+    "src": "31:1805:0"
   },
   "compiler": {
     "name": "solc",
@@ -3559,6 +3559,37 @@
           ],
           "name": "PublicTenderNotarized",
           "type": "event"
+        },
+        "0x03ce4a1078ee957434dc07c581504adfe7c4c64d301e8de7e411a4436440211a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "name": "PublicTenderNotarized",
+          "type": "event"
         }
       },
       "links": {},
@@ -3567,7 +3598,7 @@
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-09-21T20:50:45.569Z",
+  "updatedAt": "2020-10-05T15:37:43.638Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

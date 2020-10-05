@@ -1,78 +1,80 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >= 0.5.0 < 0.7.0;
+pragma experimental ABIEncoderV2;
 
 import "./RBBRegistry.sol";
 
 contract Notarizer {
-
     RBBRegistry public rbbRegistry;
 
-    // Constant that indicates that the document notarization was revoked
-    uint public NOTARIZATION_REVOKED = 0;
-
-    // Constant that indicates that the document never expires
-    uint public NEVER_EXPIRES = 0;
-
-
-    struct NotarizationInfo {
-        // Notarization date (0 means "not verified")
-        uint notarizationDate;
-        // Verification expiration date (0 means "never expires")
-        uint expirationDate;
+    struct NotarizationInfo
+    {
+        bytes32 docHash;
+        uint    notarizationDate;
     }
 
-    // Attester RBB Id => Document hash => notarizationInfo
-    mapping (uint => mapping (uint256 => NotarizationInfo)) private notarizationInfo;
+    // Attester RBB Id => Document metadata => Document Id => NotarizationInfo array.
+    // Each element of the array is a version of the document.
+    mapping (uint => mapping (string => mapping(string => NotarizationInfo[]))) 
+        private notarizationInfos;
 
-    // Document hash, attester RBB Id, date of today and expiration date
-    event DocumentNotarized(uint, uint256, uint, uint);
-    event NotarizationRevoked(uint, uint256, uint);
+    // Attester RBB Id, document metadata, document id, document hash, notarization date, version
+    event DocumentNotarized(uint, string, string, bytes32, uint, uint);
 
     constructor (address rbbRegistryAddr) public
     {
         rbbRegistry = RBBRegistry (rbbRegistryAddr);
     }
 
-    function notarizeDocument(uint256 hash) public 
+    function notarizeDocument (string memory docMetadata, string memory docId, 
+        bytes32 docHash) public 
     {
-        notarizeDocumentWithExpirationDate(hash, NEVER_EXPIRES);
+        uint attesterId = rbbRegistry.getId(msg.sender);
+        uint notarizationDate = now; 
+
+        notarizationInfos[attesterId][docMetadata][docId]
+            .push(NotarizationInfo(docHash, notarizationDate));
+
+        uint numberOfVersions = notarizationInfos[attesterId][docMetadata][docId].length;
+
+        // Attester RBB Id, document metadata, document id, document hash, notarization date, version
+        emit DocumentNotarized(attesterId, docMetadata, docId, docHash, 
+            notarizationDate, numberOfVersions);
     }
 
-    function notarizeDocumentWithExpirationDate(uint256 hash, uint validDays) public 
-    {        
-        uint expirationDate = validDays > 0 ? now + validDays * 1 days : NEVER_EXPIRES;
-        uint attesterRbbId = rbbRegistry.getId(msg.sender);
- 
-        notarizationInfo[attesterRbbId][hash] = NotarizationInfo(now, expirationDate);
-
-        emit DocumentNotarized(attesterRbbId, hash, now, expirationDate);
-    }
-
-    function isNotarizedDoc(uint attesterId, uint256 hash) public view returns (bool)
+    function isNotarizedDocument(uint attesterId, string memory docMetadata, string memory docId, 
+        bytes32 docHash) public view returns (bool)
     {
-        return isNotarizedAndNotExpiredDoc(attesterId, hash);
+        uint numberOfVersions = notarizationInfos[attesterId][docMetadata][docId].length;
+
+        return (numberOfVersions == 0) ? 
+            false : 
+            (notarizationInfos[attesterId][docMetadata][docId][numberOfVersions - 1].docHash == docHash);
     }
 
-    function isNotarizedAndNotExpiredDoc(uint attesterId, uint256  hash) public view returns (bool)
+    // Retorna um boolean que indica se há informacao disponivel e, caso true, 
+    // retorna todos os hashs e as datas das notarizacoes em ordem de versao
+    function notarizationInfoByData(uint attesterId, string memory docMetadata, 
+        string memory docId) public view returns(bool, bytes32[] memory, uint[] memory)
     {
-        NotarizationInfo memory docInfo = notarizationInfo[attesterId][hash];
-        return ((docInfo.notarizationDate != 0) && 
-            ((docInfo.expirationDate >= now) || (docInfo.expirationDate == NEVER_EXPIRES)));
+
+        uint length = notarizationInfos[attesterId][docMetadata][docId].length;
+        bool existNotarization = (length > 0);
+
+        bytes32[] memory    hashs = new bytes32[](length);
+        uint[] memory      dates = new uint[](length);
+
+        if (existNotarization)
+        {
+            for (uint i = 0; i < length; i++)
+            {
+                hashs[i] = notarizationInfos[attesterId][docMetadata][docId][i].docHash; 
+                dates[i] = notarizationInfos[attesterId][docMetadata][docId][i].notarizationDate;
+            }            
+        }
+
+        return (existNotarization, hashs, dates);
+
     }
 
-    function isNotarizedButExpiredDoc(uint attesterId, uint256 hash) public view returns (bool)
-    {
-        NotarizationInfo memory docInfo = notarizationInfo[attesterId][hash];
-        return ((docInfo.notarizationDate != 0) && (docInfo.expirationDate < now));
-    }
-
-    function revoke(uint256  hash) public 
-    {
-        uint attesterRbbId = rbbRegistry.getId(msg.sender);
-
-        notarizationInfo[attesterRbbId][hash] = 
-            NotarizationInfo(NOTARIZATION_REVOKED, NOTARIZATION_REVOKED);
-
-        emit NotarizationRevoked(attesterRbbId, hash, now);
-    }
 }
