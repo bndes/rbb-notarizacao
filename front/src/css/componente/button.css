@@ -1,0 +1,148 @@
+.br-button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: var(--color-primary-default);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: var(--font-weight-semi-bold);
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 575px) {
+  .br-button {
+    min-width: 156px;
+    width: auto;
+  }
+}
+
+.br-button:not(:disabled):focus {
+  background: var(--status-focused-background) linear-gradient(var(--status-focused-overlay), var(--status-focused-overlay));
+}
+
+.br-button:not(:disabled):hover {
+  background: var(--status-hover-background);
+}
+
+.br-button:not(:disabled):active {
+  background: var(--status-pressed-background);
+  color: var(--status-pressed-text);
+}
+
+.br-button.is-primary, .br-button.primary, .br-button[primary] {
+  background: var(--color-primary-default);
+  color: var(--color-secondary-01);
+}
+
+.br-button.is-primary:not(:disabled):focus, .br-button.is-primary:not(:disabled)[focus], .br-button.is-primary:not(:disabled):hover, .br-button.is-primary:not(:disabled)[hover], .br-button.primary:not(:disabled):focus, .br-button.primary:not(:disabled)[focus], .br-button.primary:not(:disabled):hover, .br-button.primary:not(:disabled)[hover], .br-button[primary]:not(:disabled):focus, .br-button[primary]:not(:disabled)[focus], .br-button[primary]:not(:disabled):hover, .br-button[primary]:not(:disabled)[hover] {
+  color: var(--color-primary-default);
+}
+
+.br-button.is-primary:not(:disabled):active, .br-button.is-primary:not(:disabled)[active], .br-button.primary:not(:disabled):active, .br-button.primary:not(:disabled)[active], .br-button[primary]:not(:disabled):active, .br-button[primary]:not(:disabled)[active] {
+  color: var(--color-secondary-01);
+}
+
+.br-button.is-call-to-action, .br-button.action, .br-button[action] {
+  background: var(--color-highlight);
+  border-color: var(--color-secondary-03);
+  border-radius: 40px;
+  border-width: 16px;
+  color: var(--color-secondary-01);
+  font-size: var(--font-size-scale-up-01);
+  height: 80px;
+  line-height: 48px;
+  padding: 0 44px;
+}
+
+@media (min-width: 575px) {
+  .br-button.is-call-to-action, .br-button.action, .br-button[action] {
+    min-width: 220px;
+  }
+}
+
+.br-button.is-call-to-action:not(:disabled):not(:active):not([active]):focus, .br-button.is-call-to-action:not(:disabled):not(:active):not([active])[focus], .br-button.action:not(:disabled):not(:active):not([active]):focus, .br-button.action:not(:disabled):not(:active):not([active])[focus], .br-button[action]:not(:disabled):not(:active):not([active]):focus, .br-button[action]:not(:disabled):not(:active):not([active])[focus] {
+  color: var(--color-highlight);
+}
+
+.br-button.is-call-to-action:not(:disabled):not(:active):not([active]):hover, .br-button.is-call-to-action:not(:disabled):not(:active):not([active])[hover], .br-button.action:not(:disabled):not(:active):not([active]):hover, .br-button.action:not(:disabled):not(:active):not([active])[hover], .br-button[action]:not(:disabled):not(:active):not([active]):hover, .br-button[action]:not(:disabled):not(:active):not([active])[hover] {
+  background: var(--color-support-01);
+  color: var(--color-secondary-01);
+}
+
+.br-button.is-secondary, .br-button.secondary, .br-button[secondary] {
+  border-color: var(--color-primary-default);
+}
+
+.br-button.is-mini, .br-button.mini, .br-button[mini] {
+  font-size: var(--font-size-scale-down-01);
+  height: 32px;
+  line-height: 32px;
+  min-width: 68px;
+  width: auto;
+}
+
+.br-button.is-circle, .br-button.circle, .br-button[circle] {
+  border-radius: 50%;
+  height: var(--icon-size-3x);
+  min-width: 0;
+  padding: 0;
+  width: var(--icon-size-3x);
+}
+
+.br-button.is-circle.is-call-to-action, .br-button.is-circle.action, .br-button.is-circle[action], .br-button.circle.is-call-to-action, .br-button.circle.action, .br-button.circle[action], .br-button[circle].is-call-to-action, .br-button[circle].action, .br-button[circle][action] {
+  height: var(--icon-size-5x);
+  width: var(--icon-size-5x);
+}
+
+.br-button.is-circle.is-mini, .br-button.is-circle.mini, .br-button.is-circle[mini], .br-button.circle.is-mini, .br-button.circle.mini, .br-button.circle[mini], .br-button[circle].is-mini, .br-button[circle].mini, .br-button[circle][mini] {
+  height: 32px;
+  width: 32px;
+}
+
+.br-button:not(:disabled):focus {
+  background: var(--status-focused-background) linear-gradient(var(--status-focused-overlay), var(--status-focused-overlay));
+}
+
+.br-button:not(:disabled)[focus] {
+  background: var(--status-highlight-background) linear-gradient(var(--status-focused-overlay), var(--status-focused-overlay));
+}
+
+.br-button:not(:disabled):hover {
+  background: var(--status-hover-background);
+}
+
+.br-button:not(:disabled)[hover] {
+  background: var(--status-hover-background);
+}
+
+.br-button:not(:disabled):active {
+  background: var(--status-pressed-background);
+  color: var(--status-pressed-text);
+}
+
+.br-button:not(:disabled):active {
+  color: var(--color-secondary-01);
+}
+
+.br-button:not(:disabled)[active] {
+  background: var(--status-pressed-background);
+  color: var(--color-secondary-01);
+}
+
+.br-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

@@ -1,0 +1,150 @@
+.br-select {
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.br-select select {
+  display: none;
+}
+
+.br-select .select-selected {
+  align-items: center;
+  background: var(--color-secondary-01);
+  border: 1px solid #888;
+  border-radius: 6px;
+  color: var(--color-secondary-07);
+  display: flex;
+  font-weight: var(--font-weight-medium);
+  height: 40px;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align-last: left;
+  width: 100%;
+}
+
+.br-select .select-selected span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.br-select .select-selected [class*="fa-"] {
+  color: var(--color-primary-default);
+  font-size: 13.33333px;
+  margin-left: 48px;
+}
+
+.br-select .select-selected:focus {
+  outline: none;
+}
+
+.br-select .select-selected:focus:focus {
+  background: var(--status-focused-background) linear-gradient(var(--status-focused-overlay), var(--status-focused-overlay));
+}
+
+.br-select .select-selected:focus [class*="fa-"], .br-select .select-selected:hover [class*="fa-"] {
+  color: var(--color-primary-lighten-01);
+  margin-left: 16px;
+}
+
+.br-select .select-selected:disabled {
+  background: var(--status-disabled-background);
+  border-color: var(--color-secondary-04);
+}
+
+.br-select .select-selected:disabled [class*="fa-"] {
+  color: var(--color-primary-default);
+  opacity: .45;
+  margin-left: 16px;
+}
+
+.br-select .select-items {
+  background: var(--color-secondary-01);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+  left: 4px;
+  margin-top: 1px;
+  position: absolute;
+  right: 4px;
+  z-index: 1;
+}
+
+.br-select .select-items button {
+  background: var(--color-secondary-01);
+  border: 0;
+  display: block;
+  font-weight: var(--font-weight-medium);
+  padding: 4px 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.br-select .select-items button:hover, .br-select .select-items button:focus {
+  background: var(--color-primary-pastel-02);
+}
+
+.br-select .select-items button.same-as-selected {
+  background: var(--color-primary-lighten-01);
+  color: var(--color-secondary-01);
+}
+
+.br-select .select-hide {
+  display: none;
+}
+
+.br-select.is-medium .select-selected {
+  height: 40px;
+}
+
+.br-select.is-medium .select-selected [class*="fa-"] {
+  font-size: 13.33333px;
+}
+
+.br-select.is-small .select-selected {
+  height: 32px;
+}
+
+.br-select.is-small .select-selected [class*="fa-"] {
+  font-size: 10.66667px;
+}
+
+.br-select.is-valid .select-selected {
+  border-color: var(--color-success);
+  box-shadow: 0 0 0 1px var(--color-success);
+  outline: none;
+}
+
+.br-select.is-valid .select-selected [class*="fa-"] {
+  color: var(--color-success);
+  margin-left: 16px;
+}
+
+.br-select.is-invalid .select-selected {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 1px var(--color-danger);
+  outline: none;
+}
+
+.br-select.is-invalid .select-selected [class*="fa-"] {
+  color: var(--color-danger);
+  margin-left: 16px;
+}
+
+.br-select.is-focus input {
+  background: var(--status-focused-background) linear-gradient(var(--status-focused-overlay), var(--status-focused-overlay));
+}
+
+.br-select.is-disabled label {
+  opacity: .45;
+}
+
+.br-select.is-disabled input {
+  background: var(--status-disabled-background);
+  border-color: var(--color-secondary-04);
+}
+
+.br-select.is-disabled .select-selected {
+  color: var(--color-secondary-04);
+}

@@ -1,0 +1,38 @@
+<div class="br-header" compact>
+  <div class="container-lg">
+    <div class="flex-container">
+      <div class="logo">
+        <img src="https://www.gov.br/++theme++padrao_govbr/img/govbr-colorido-b.png" alt="logo">
+        <div class="sign">Ministério da Ciência e Tecnologia, Inovações e Comunicações</div>
+      </div>
+      <div class="actions">
+        <div class="links">
+          <button class="br-button" type="button" circle mini><i class="fas fa-ellipsis-v"></i>
+          </button>
+          <ul>
+            <li class="title">Acesso Rápido</li>
+            <li><a style="font-size: 20px;" class="nav-link" [routerLink]="['home']" routerLinkActive="active" 
+              [routerLinkActiveOptions]="{exact: true}">Notarização</a></li>
+          </ul>
+        </div> 
+      </div> 
+
+  <div class="menu">
+    <button class="br-button" type="button" circle mini (click)="toggleSideBar()" ><i class="fas fa-bars"></i>
+      
+    </button>
+    <div class="title">Rede Brasileira de Blockchain</div>
+    <div class="subtitle">RBB - Notarização</div>
+  </div>
+  <div class="search">
+    <div class="br-input has-icon">
+      <label></label>
+      <input class="has-icon" type="text" placeholder="O que você procura?">
+      <button class="icon" type="button"><span class="icon"><i class="fas fa-search"></i></span></button>
+    </div>
+    <button class="br-button search-close" type="button" circle mini><i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+</div>
+</div>

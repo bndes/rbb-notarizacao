@@ -1,0 +1,86 @@
+.br-card {
+  box-shadow: 0 3px 6px rgba(var(--rgb-secondary-09), 0.16);
+  margin-bottom: 16px;
+}
+
+.br-card .front,
+.br-card .back {
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-flow: column;
+}
+
+.br-card .back {
+  --bg-color: var(--color-secondary-07);
+  --text-color: var(--color-secondary-01);
+  --color-primary-default: var(--color-secondary-01);
+  --status-hover-background: var(--color-secondary-06);
+  --status-highlight-background: var(--color-secondary-07);
+}
+
+.br-card .header,
+.br-card .content,
+.br-card .footer {
+  padding: 16px;
+}
+
+.br-card .header:empty,
+.br-card .content:empty,
+.br-card .footer:empty {
+  padding: 0;
+}
+
+.br-card .header *:last-child,
+.br-card .content *:last-child,
+.br-card .footer *:last-child {
+  margin-bottom: 0;
+}
+
+.br-card .content {
+  flex: 1;
+}
+
+.br-card .header + .content,
+.br-card .content + .footer {
+  padding-top: 0;
+}
+
+.br-card[flipped] .front,
+.br-card[flipped] .back {
+  overflow: hidden;
+  transition: opacity 600ms ease;
+}
+
+.br-card[flipped='on'] .front {
+  height: 0;
+  opacity: 0;
+}
+
+.br-card[flipped='off'] .back {
+  height: 0;
+  opacity: 0;
+}
+
+.br-card[expanded] .expanded {
+  overflow: hidden;
+}
+
+.br-card[expanded='on'] .expanded {
+  height: 100%;
+  opacity: 1;
+}
+
+.br-card[expanded='off'] .expanded {
+  opacity: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.br-card:disabled, .br-card[disabled] {
+  opacity: 0.45;
+}
+
+.br-card:disabled *, .br-card[disabled] * {
+  pointer-events: none;
+}
