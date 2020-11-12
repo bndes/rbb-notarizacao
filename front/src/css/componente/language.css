@@ -1,0 +1,42 @@
+.br-language {
+  z-index: 4;
+}
+
+.br-language .trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #212529;
+  display: flex;
+  font-weight: 400;
+  padding: 0;
+}
+
+.br-language .trigger .arrow {
+  font-size: 10px;
+  margin-left: 8px;
+}
+
+.br-language .menu {
+  border-top: 1px solid #ffcd07;
+  margin: 8px 0 0;
+  right: 0;
+}
+
+.br-language .menu .title {
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  margin: 16px 16px 8px;
+  padding: 0;
+}
+
+.br-language .menu .item {
+  white-space: nowrap;
+}
+
+.br-language .menu .item.is-active {
+  color: #1351b4;
+  font-weight: 600;
+}

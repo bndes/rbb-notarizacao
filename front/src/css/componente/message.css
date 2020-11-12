@@ -1,0 +1,249 @@
+.br-message {
+  color: var(--color-secondary-08, #333);
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.br-message .icon {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 175%;
+  justify-content: center;
+  width: 64px;
+}
+
+.br-message .icon img {
+  max-width: 32px;
+}
+
+.br-message .content {
+  align-self: center;
+  flex: 1;
+  padding: 20px 20px;
+  font-size: var(--font-size-scale-up-01);
+}
+
+.br-message .content strong {
+  font-weight: 600;
+}
+
+.br-message .content a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.br-message .content a:hover {
+  color: #0056b3;
+}
+
+.br-message .content *:last-child {
+  margin-bottom: 0;
+}
+
+.br-message a {
+  color: var(--color-secondary-08, #333);
+  text-decoration: underline;
+}
+
+.br-message a:hover {
+  color: var(--color-primary-lighten-01, #2670e8);
+}
+
+.br-message .close button.br-button.is-tertiary {
+  margin: 0;
+}
+
+.br-message.is-success {
+  background: #e1fae3;
+}
+
+.br-message.is-success .icon {
+  background: transparent;
+  color: #168821;
+}
+
+.br-message.is-success .close {
+  align-items: flex-start;
+  display: flex;
+}
+
+.br-message.is-success .close button {
+  background: transparent;
+  border: 0;
+  color: #168821;
+  padding: 0;
+}
+
+.br-message.is-success .close button.br-button.is-tertiary:hover {
+  background-color: transparent;
+  color: #168821;
+}
+
+.br-message.hint {
+  align-items: center;
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint .icon {
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint .content {
+  padding: 0;
+}
+
+.br-message.is-danger {
+  background: #ffe3e3;
+}
+
+.br-message.is-danger .icon {
+  background: transparent;
+  color: #e60000;
+}
+
+.br-message.is-danger .close {
+  align-items: flex-start;
+  display: flex;
+}
+
+.br-message.is-danger .close button {
+  background: transparent;
+  border: 0;
+  color: #e60000;
+  padding: 0;
+}
+
+.br-message.is-danger .close button.br-button.is-tertiary:hover {
+  background-color: transparent;
+  color: #e60000;
+}
+
+.br-message.hint {
+  align-items: center;
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint .icon {
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint .content {
+  padding: 0;
+}
+
+.br-message.is-warning {
+  background: #fffae6;
+}
+
+.br-message.is-warning .icon {
+  background: transparent;
+  color: #ffcd07;
+}
+
+.br-message.is-warning .close {
+  align-items: flex-start;
+  display: flex;
+}
+
+.br-message.is-warning .close button {
+  background: transparent;
+  border: 0;
+  color: #ffcd07;
+  padding: 0;
+}
+
+.br-message.is-warning .close button.br-button.is-tertiary:hover {
+  background-color: transparent;
+  color: #ffcd07;
+}
+
+.br-message.is-warning .icon,
+.br-message.is-warning .close button {
+  color: #333;
+}
+
+.br-message.is-warning .icon.br-button.is-tertiary:hover,
+.br-message.is-warning .close button.br-button.is-tertiary:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+.br-message.hint {
+  align-items: center;
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint .icon {
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint .content {
+  padding: 0;
+}
+
+.br-message.is-info {
+  background: #e5eefc;
+}
+
+.br-message.is-info .icon {
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.is-info .close {
+  align-items: flex-start;
+  display: flex;
+}
+
+.br-message.is-info .close button {
+  background: transparent;
+  border: 0;
+  color: #155bcb;
+  padding: 0;
+}
+
+.br-message.is-info .close button.br-button.is-tertiary:hover {
+  background-color: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint {
+  align-items: center;
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint .icon {
+  background: transparent;
+  color: #155bcb;
+}
+
+.br-message.hint .content {
+  padding: 0;
+}
+
+.feedback {
+  align-items: center;
+  font-style: italic;
+  font-weight: var(--font-weight-medium, 500);
+  padding: 4px 0;
+}
+
+.feedback.is-valid {
+  color: var(--color-success, #168821);
+}
+
+.feedback.is-invalid {
+  color: var(--color-danger, #e60000);
+}
+
+.feedback.is-disabled {
+  color: #555;
+}

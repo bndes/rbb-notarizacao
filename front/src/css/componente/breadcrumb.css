@@ -1,0 +1,72 @@
+.br-breadcrumb {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+
+.br-breadcrumb .home a {
+  color: var(--color-secondary-07, #555);
+}
+
+.br-breadcrumb .home a:hover, .br-breadcrumb .home a:focus {
+  color: var(--color-primary-lighten-01, #2670e8);
+  text-decoration: none;
+}
+
+.br-breadcrumb li {
+  color: var(--color-secondary-07, #555);
+  display: inline;
+  font-size: var(--font-size-scale-down-01, 0.833);
+  font-weight: var(--font-weight-semi-bold, 600);
+  flex: 0 0 auto;
+}
+
+.br-breadcrumb li a {
+  color: var(--color-secondary-08, #333);
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+}
+
+.br-breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.br-breadcrumb li.more svg {
+  background-color: var(--color-secondary-04, #ccc);
+  padding: 0 2px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.br-breadcrumb li + li::before {
+  color: var(--color-secondary-04, #ccc);
+  content: ">";
+  font-size: var(--font-size-scale-down-01, 0.833);
+  font-weight: var(--font-weight-regular, 400);
+  padding: 0 8px;
+}
+
+.br-breadcrumb .is-active {
+  font-weight: var(--font-weight-bold, 700);
+}
+
+.br-breadcrumb .is-active a {
+  font-weight: var(--font-weight-bold, 700);
+}
+
+.br-breadcrumb::-webkit-scrollbar {
+  height: 6px;
+}
+
+.br-breadcrumb::-webkit-scrollbar-track {
+  background: var(--color-secondary-04);
+  border-radius: 0px;
+}
+
+.br-breadcrumb::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-05);
+  border-radius: 0px;
+}

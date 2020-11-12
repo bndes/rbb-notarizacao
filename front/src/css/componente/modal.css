@@ -1,0 +1,98 @@
+.br-modal {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 16px;
+  width: 28.8rem;
+}
+
+.br-modal-header {
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.br-modal-header .close {
+  background: transparent;
+  border: 0;
+  color: var(--color-primary-default, #1351b4);
+  font-weight: var(--font-weight-medium, 500);
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: -4px;
+}
+
+.br-modal-title {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  font-size: var(--font-size-scale-up-01, 1.2);
+  font-weight: var(--700, 700);
+  margin: 0;
+  max-height: var(--font-size-scale-up-07, 3.583);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.br-modal-title.is-inline {
+  -webkit-line-clamp: 1;
+  max-height: 3.5rem;
+}
+
+.br-modal-body {
+  margin: 0 0 40px;
+}
+
+.br-modal-footer {
+  display: flex;
+}
+
+.br-modal .br-card {
+  border: 0;
+  font-size: var(--font-size-scale-base, 14px);
+  height: 216px;
+  margin-left: -16px;
+  margin-right: -16px;
+  overflow: auto;
+  padding: 0 16px;
+  resize: none;
+  width: auto;
+}
+
+.br-modal .br-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.br-modal .br-card::-webkit-scrollbar-track {
+  background: var(--color-secondary-03, #ededed);
+}
+
+.br-modal .br-card::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-06, #888);
+}
+
+.br-modal .br-card:focus, .br-modal .br-card:active {
+  outline: none;
+}
+
+.br-modal .br-card:hover::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-07, #555);
+}
+
+@media (min-width: 575px) {
+  .br-modal.is-xsmall {
+    max-width: 220px;
+    min-width: 220px;
+  }
+  .br-modal.is-small {
+    max-width: 300px;
+    min-width: 300px;
+  }
+  .br-modal.is-medium {
+    max-width: 500px;
+    min-width: 500px;
+  }
+  .br-modal.is-large {
+    max-width: 640px;
+    min-width: 640px;
+  }
+}
