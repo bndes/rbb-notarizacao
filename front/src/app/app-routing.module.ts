@@ -5,11 +5,14 @@ import { TemplateComponent } from './template/template.component';
 import { NotarizeComponent } from './notarize/notarize.component';
 
 const routes: Routes = [
-  { path: 'home', component: TemplateComponent,
+  { path: '', component: TemplateComponent,
     children: [
       {
         path: 'notarize', component: NotarizeComponent,
-      }
+      },
+      {
+        path: '', component: NotarizeComponent,
+      }      
     ]
   }
   ];
