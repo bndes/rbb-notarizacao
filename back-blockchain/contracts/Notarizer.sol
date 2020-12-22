@@ -1,11 +1,11 @@
 //SPDX-License-Identifier: MIT
-pragma solidity >= 0.5.0 < 0.7.0;
+pragma solidity ^0.6.0;
 pragma experimental ABIEncoderV2;
 
-import "./RBBRegistry.sol";
+import "./IRBBRegistry.sol";
 
 contract Notarizer {
-    RBBRegistry public rbbRegistry;
+    IRBBRegistry public rbbRegistry;
 
     struct NotarizationInfo
     {
@@ -23,7 +23,7 @@ contract Notarizer {
 
     constructor (address rbbRegistryAddr) public
     {
-        rbbRegistry = RBBRegistry (rbbRegistryAddr);
+        rbbRegistry = IRBBRegistry (rbbRegistryAddr);
     }
 
     function notarizeDocument (string memory docMetadata, string memory docId, 
