@@ -14,6 +14,7 @@ export class NotarizeComponent implements OnInit {
   docHash: string = "";
   docMetadada: string = "";
   docId: string = "";
+  cnpjParaBusca: number = 0; 
  
   constructor(private web3Service: Web3Service, public dialog: MatDialog) { }
 

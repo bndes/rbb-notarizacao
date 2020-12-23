@@ -185,14 +185,25 @@ export class Web3Service {
         let result = await this.notarizerSmartContract.isNotarizedDocument(id, docMetadata, docId, docHash);
         return result;
 
+/*
+Implementar o código que chama o back para checar se a última versão notarizada pelo mesmo CNPJ (que é o CNPJ de quem está realizando a transação) com os mesmos metadados (nome do campo de identificação do documento e valor do campo de identificação do documento) é igual ou não à versão correspondente ao arquivo que sofreu upload. Isso é feito chamando a função isNotarizedDocument(attesterId, docMetadata, docId, docHash).
+Para essa implementação, usar um hash fake (ou colocar temporariamente um campo para entrada do hash explicitamente), pois a implementação do upload e do cálculo do hash poderá ser realizada em outro issue.
+Esse mesmo método poderá será reutilizado no início do código do botão Notarizar.
+*/
     }
   
-    notarizar() {
-      
+    async notarizar(docMetadata: string, docId: string, docHash: string) {
+/*
+Implementar chamada do back-blockchain para a efetiva notarização.
+Implementação mais simples, bastando orquestrar as duas implementadas anteriormente (o upload do arquivo e o cálculo do hash + a chamada da função checar, nessa ordem) com a chamada do método notarizeDocument (docMetadata, docId, docHash) do back.
+*/ 
     }
-  
 
-
-
+    async buscaVersoes(attesterCNPJ: number, docMetadata: string, docId:string, docHash: string) {
+/*
+Implementar a a chamada ao método notarizationInfoByData(attesterId, docMetadata, docId) public view returns(bool, bytes32[] memory, uint[] memory). No caso de um retorno false, mensagem deve apenas dizer que não há versão notarizada para os dados passados (CNPJ do Notarizador e metadados do documento).
+Se o boolean retornado for true, o vetor de bytes32 é o vetor dos hashs e o de uint é o vetor das datas. Estes dados deverão ser apresentados em ordem inversa cronológica.
+*/   
+} 
 
 }
