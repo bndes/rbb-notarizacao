@@ -14,12 +14,13 @@
      
         <div class="br-input">
           <label for="cpf-id1">Nome do campo de identificação do documento </label>
-          <input id="cpf-id1" type="text" placeholder="Ex.: 0151140">
+
+          <input id="cpf-id1"  [(ngModel)]="docMetadada"  type="text" placeholder="Ex.: 0151140">
         </div>
         
         <div class="br-input">
           <label for="cpf-id1">Valor do campo de identificação do documento </label>
-          <input id="cpf-id1" type="text" placeholder="Ex.: 29f96ce13f014dc33397d0b53fa478f1838617bbd2aff426028f08e6612fa53e">
+          <input id="cpf-id1" [(ngModel)]="docId" type="text" placeholder="Ex.: 29f96ce13f014dc33397d0b53fa478f1838617bbd2aff426028f08e6612fa53e">
         </div>
 
 
@@ -39,10 +40,10 @@
 
           <div class="upload-list"></div>
         </div>
-        <button (click)="openDialog()" style="height: 10%; width: 25%; margin-left: 6%; margin-top: 10%;  font-size: 21px;" class="br-button primary" type="button">Checar
+        <button (click)="verificaEstaNotarizado()" style="height: 10%; width: 25%; margin-left: 6%; margin-top: 10%;  font-size: 21px;" class="br-button primary" type="button">Checar
         </button>
 
-        <button (click)="openDialog()" style="height: 12%; width: 35%;  margin-top: 10%; margin-left: 5%;  font-size: 21px;" class="br-button primary" type="button">Notarizar
+        <button (click)="notarizar()" style="height: 12%; width: 35%;  margin-top: 10%; margin-left: 5%;  font-size: 21px;" class="br-button primary" type="button">Notarizar
         </button>
       </div>  
       
@@ -64,7 +65,7 @@
           <input id="cpf-id1" type="text" placeholder="Ex.: 0151140">
         </div>
 
-        <button (click)="openDialog()" style="height: 14%; width: 35%;  margin-top: 5%; margin-left: 20%;  font-size: 21px;" class="br-button primary" type="button">Buscar
+        <button (click)="buscarVersoes()" style="height: 14%; width: 35%;  margin-top: 5%; margin-left: 20%;  font-size: 21px;" class="br-button primary" type="button">Buscar
         </button>
       </div>
     </div>

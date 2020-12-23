@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import {Web3Service} from '../Web3Service';
 
 
 @Component({
@@ -11,8 +12,29 @@ import { MatDialog } from '@angular/material/dialog';
 export class NotarizeComponent implements OnInit {
   contentHidden: boolean = false;
   docHash: string = "";
+  docMetadada: string = "";
+  docId: string = "";
  
-  constructor(public dialog: MatDialog) { }
+  constructor(private web3Service: Web3Service, public dialog: MatDialog) { }
+
+  verificaEstaNotarizado() {
+    
+    console.log("this.docMetadata=" + this.docMetadada);
+    console.log("this.docId=" + this.docId);
+    console.log("this.docHash=" + this.docHash);
+    
+    this.web3Service.verificaEstaNotarizado(this.docMetadada, this.docId, this.docHash);
+
+  }
+
+  notarizar() {
+
+    
+  }
+
+  buscarVersoes() {
+    
+  }
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogContentExampleDialog);

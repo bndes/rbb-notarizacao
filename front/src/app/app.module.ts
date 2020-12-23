@@ -12,6 +12,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TemplateComponent } from './template/template.component';
 import { DialogContentExampleDialog, NotarizeComponent } from './notarize/notarize.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Web3Service } from './Web3Service';
+import { ConstantesService } from './ConstantesService';
 
 
 
@@ -35,7 +37,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MaterialModule
     
   ],
-  providers: [],
+  providers: [Web3Service, ConstantesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
