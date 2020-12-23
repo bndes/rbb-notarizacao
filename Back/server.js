@@ -10,11 +10,7 @@ const sql = require("mssql");
 const fs 		= require('fs');
 const keccak256 = require('keccak256'); 
 const https = require ('https');
-
 const multer = require('multer');
-
-const mockPJ = config.negocio.mockPJ;
-
 
 app.use(bodyParser.urlencoded({ 'extended': 'true' }));         // parse application/x-www-form-urlencoded
 app.use(bodyParser.json());                                     // parse application/json
@@ -30,14 +26,12 @@ app.use(function (req, res, next) {
 	next();
 });
 
-
 let contrato_json_Notarizer = require(config.infra.contrato_json_Notarizer);
 let contrato_json_IRBBRegistry = require(config.infra.contrato_json_IRBBRegistry);
 
 var n = contrato_json_Notarizer.networks;
 
 console.log("config.infra.rede_blockchain (1=Main|4=Rinkeby|4447=local) = " + config.infra.rede_blockchain);
-
 
 let addrContratoNotarizer;
 let addrContratoRBBRegistry;
@@ -85,128 +79,6 @@ app.post('/api/constantesFront', function (req, res) {
 });
 
 console.log("operationAPIURL=" + config.infra.operationAPIURL);
-
-app.post('/api/constantesFrontPJ', function (req, res) {
-	console.log("operationAPIURL=" + config.infra.operationAPIURL);
-	console.log("mockMongoClient=" + config.negocio.mockMongoClient)
-	console.log("mockPJ=" + mockPJ)
-
-	let consts = { operationAPIURL: config.infra.operationAPIURL,  
-		mockMongoClient: config.negocio.mockMongoClient, 
-		mockPJ: mockPJ,
-		maxFileSize: MAX_FILE_SIZE
-	}
-
-	res.json(consts);
-
-	console.log(consts);
-
-});
-
-
-app.post('/api/pj-por-cnpj', buscaPJPorCnpj);
-
-	function buscaPJPorCnpj (req, res, next) {
-		let cnpjRecebido = req.body.cnpj;
-
-		let isNum = /^\d+$/.test(cnpjRecebido);
-
-		if (!isNum) {			
-			res.status(200).json({});
-		}
-
-
-		if (mockPJ) {
-			
-			console.log("mock PJ ON!");
-			https.get('https://www.receitaws.com.br/v1/cnpj/' + cnpjRecebido, (resp) => {
-				let data = '';
-
-				resp.on('data', (chunk) => {
-					data += chunk;
-				  });
-
-				resp.on('end', () => {
-					if (data=="Too many requests, please try again later.") {
-
-						console.log(data)
-						let pj = 	
-						{
-							cnpj: "00000000000000",
-							dadosCadastrais: {
-								razaoSocial: "Serviço da Receita Indisponível"
-							}
-						}
-						res.status(200).json(pj);
-						return;
-					} 
-					else {
-						try {
-							jsonData = JSON.parse(data);
-						} catch (e) {
-							res.status(200).json(pj);
-							return;	
-						}						
-						console.log(jsonData);
-
-						let pj = 	
-						{
-							cnpj: cnpjRecebido,
-							dadosCadastrais: {
-								razaoSocial: jsonData.nome
-							}
-						}
-						console.log("pj=");
-						console.log(pj);
-						res.status(200).json(pj);				
-					}
-
-				});
-			}).on("error", (err) => {
-				console.log("Erro ao buscar mock da API: " + err.message);
-			  });
-
-		}
-		else {
-
-			new sql.ConnectionPool(configAcessoBDPJ).connect().then(pool => {
-				return pool.request()
-									 .input('cnpj', sql.VarChar(14), cnpjRecebido)
-									 .query(config.negocio.query_cnpj)
-				
-				}).then(result => {
-					let rows = result.recordset
-	
-					if (!rows[0]) {
-						res.status(200).json({});
-						return;
-					}
-	
-					let pj = 	
-					{
-						cnpj: rows[0]["CNPJ_EMPRESA"],
-						dadosCadastrais: {
-							razaoSocial: rows[0]["NOME_EMPRESARIAL"]
-						}
-					}
-	
-					console.log("pj do QSA");				
-					console.log(pj);
-	
-					res.status(200).json(pj);				
-					sql.close();
-	
-	
-				}).catch(err => {
-					console.log(err);
-					res.status(500).send({ message: "${err}"})
-					sql.close();
-				});
-
-		}
-
-	}	
-
 
 // listen (start app with node server.js) ======================================
 app.listen(8080, "0.0.0.0");
