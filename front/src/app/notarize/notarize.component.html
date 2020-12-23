@@ -30,6 +30,13 @@
           <input class="upload-input" id="single-file" type="file">
           <button class="br-button upload-button" type="button"><i class="fas fa-upload"></i><span> Selecione ou arraste 1 arquivo</span>
           </button>
+<!--
+            <input ng2FileSelect id="arquivo" type="file" accept=".pdf" [uploader]="this.fileHandleService.uploader" (change)="this.fileHandleService.chamaUpload()" /> 
+-->
+            <div class="" *ngIf="docHash">
+              Hash do Comprovante: {{docHash}}
+            </div>
+
           <div class="upload-list"></div>
         </div>
         <button (click)="openDialog()" style="height: 10%; width: 25%; margin-left: 6%; margin-top: 10%;  font-size: 21px;" class="br-button primary" type="button">Checar

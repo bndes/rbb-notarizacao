@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class NotarizeComponent implements OnInit {
   contentHidden: boolean = false;
+  docHash: string = "";
  
   constructor(public dialog: MatDialog) { }
 
