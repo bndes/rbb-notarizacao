@@ -177,12 +177,18 @@ export class Web3Service {
 
     //TODO: incluir docHash
     async verificaEstaNotarizado(docMetadata: string, docId: string, docHash: string) {
-
+        const signer =this.accountProvider.getSigner();
+        
+        const contWithSigner = await this.notarizerSmartContract.connect(signer);
         //recupera conta e mudar docHash
-        let id = 1;
-        docHash = this.FAKE_HASH;
+        let id = await this.getIdByAddressSync(await this.getCurrentAccountSync());
+        
+        
+        //docHash = this.FAKE_HASH;
+        
 
-        let result = await this.notarizerSmartContract.isNotarizedDocument(id, docMetadata, docId, docHash);
+        //let result = await this.notarizerSmartContract.isNotarizedDocument(id, docMetadata, docId, docHash);
+        let result = await contWithSigner.isNotarizedDocument(id, docMetadata, docId, docHash);
         return result;
 
 /*
@@ -193,6 +199,11 @@ Esse mesmo método poderá será reutilizado no início do código do botão Not
     }
   
     async notarizar(docMetadata: string, docId: string, docHash: string) {
+        const signer = this.accountProvider.getSigner();
+        const contWithSigner =await this.notarizerSmartContract.connect(signer);
+        //docHash = this.FAKE_HASH;
+        
+        return await contWithSigner.notarizeDocument(docMetadata,docId,docHash);
 /*
 Implementar chamada do back-blockchain para a efetiva notarização.
 Implementação mais simples, bastando orquestrar as duas implementadas anteriormente (o upload do arquivo e o cálculo do hash + a chamada da função checar, nessa ordem) com a chamada do método notarizeDocument (docMetadata, docId, docHash) do back.
