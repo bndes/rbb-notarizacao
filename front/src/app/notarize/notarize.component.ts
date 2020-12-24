@@ -27,17 +27,21 @@ export class NotarizeComponent implements OnInit {
     this.docHash = hash;
   }
 
-  verificaEstaNotarizado() {
+  async verificaEstaNotarizado() {
     
     console.log("this.docMetadata=" + this.docMetadada);
     console.log("this.docId=" + this.docId);
     console.log("this.docHash=" + this.docHash);
-    
-    this.web3Service.verificaEstaNotarizado(this.docMetadada, this.docId, this.docHash);
+    if(await this.web3Service.verificaEstaNotarizado(this.docMetadada, this.docId, this.docHash)){
 
+      this.openDialog();
+    }
+    
+   
   }
 
-  notarizar() {
+  async notarizar() {
+    await this.web3Service.notarizar(this.docMetadada,this.docId,this.docHash);
 
     
   }
