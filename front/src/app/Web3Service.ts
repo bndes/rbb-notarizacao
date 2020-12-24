@@ -1,8 +1,8 @@
-import { Injectable  } from '@angular/core';
+import { Injectable, ɵpublishDefaultGlobalUtils  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ConstantesService } from './ConstantesService';
 import { formattedError } from '@angular/compiler';
-import {ethers} from 'ethers';
+import {ethers, utils} from 'ethers';
 
 
 @Injectable()
@@ -205,5 +205,11 @@ Implementar a a chamada ao método notarizationInfoByData(attesterId, docMetadat
 Se o boolean retornado for true, o vetor de bytes32 é o vetor dos hashs e o de uint é o vetor das datas. Estes dados deverão ser apresentados em ordem inversa cronológica.
 */   
 } 
+
+    calculaHash (textToHash: string) : string {
+        let textToHashAsHex = utils.formatBytes32String(textToHash);
+        let hash = utils.keccak256(textToHashAsHex);
+        return hash;
+    }
 
 }

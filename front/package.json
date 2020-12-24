@@ -28,6 +28,8 @@
     "angular": "^1.8.1",
     "angular-material": "^1.2.1",
     "bootstrap": "^4.5.2",
+    "keccak256": "^1.0.2",
+    "ng2-file-upload": "^1.4.0",
     "ng2-smart-table": "^1.6.0",
     "ngx-mask": "^10.0.1",
     "rxjs": "~6.6.2",

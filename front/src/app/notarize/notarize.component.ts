@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import {Web3Service} from '../Web3Service';
+import {FileHandleService} from '../file-handle.service';
 
 
 @Component({
@@ -16,7 +17,15 @@ export class NotarizeComponent implements OnInit {
   docId: string = "";
   cnpjParaBusca: number = 0; 
  
-  constructor(private web3Service: Web3Service, public dialog: MatDialog) { }
+  constructor(private web3Service: Web3Service, public dialog: MatDialog, public fileHandleService: FileHandleService) { 
+
+    this.fileHandleService.atualizaUploaderComponent(this);
+
+  }
+
+  setHash(hash) {
+    this.docHash = hash;
+  }
 
   verificaEstaNotarizado() {
     

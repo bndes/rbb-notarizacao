@@ -14,7 +14,8 @@ import { DialogContentExampleDialog, NotarizeComponent } from './notarize/notari
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Web3Service } from './Web3Service';
 import { ConstantesService } from './ConstantesService';
-
+import { FileUploadModule } from 'ng2-file-upload';
+import {FileHandleService} from './file-handle.service';
 
 
 @NgModule({
@@ -34,10 +35,10 @@ import { ConstantesService } from './ConstantesService';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
-    
+    MaterialModule,
+    FileUploadModule
   ],
-  providers: [Web3Service, ConstantesService],
+  providers: [Web3Service, ConstantesService, FileHandleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

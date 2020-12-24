@@ -23,28 +23,29 @@
           <input id="cpf-id1" [(ngModel)]="docId" type="text" placeholder="Ex.: 29f96ce13f014dc33397d0b53fa478f1838617bbd2aff426028f08e6612fa53e">
         </div>
 
-
-        <!-- Precisa de conserto -->
-        <label for="input">Upload do documento</label>
+        <!-- 
+        https://stackoverflow.com/questions/39132451/can-i-use-ng2-file-upload-with-button-instead-of-a-file-input
+        -->
+        <label for="btArquivo">Upload do documento</label>
         <div class="br-upload">
-          <label class="upload-label" for="single-file"><i class="fas fa-upload"></i><span> Selecione ou arraste 1 arquivo</span></label>
-          <input class="upload-input" id="single-file" type="file">
-          <button class="br-button upload-button" type="button"><i class="fas fa-upload"></i><span> Selecione ou arraste 1 arquivo</span>
-          </button>
-<!--
-            <input ng2FileSelect id="arquivo" type="file" accept=".pdf" [uploader]="this.fileHandleService.uploader" (change)="this.fileHandleService.chamaUpload()" /> 
--->
-            <div class="" *ngIf="docHash">
+          <button id="btArquivo" (click)="fileInput.click()" class="btn btn-default"><i class="fas fa-upload"></i>Upload</button>
+          <span style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height:0px;border:none;margin:0; padding:0">
+               <input type="file" id="arquivo" #fileInput ng2FileSelect [uploader]="this.fileHandleService.uploader" (change)="this.fileHandleService.processaArquivo($event)"/>
+          </span>
+
+            <div class="cpf-id1" *ngIf="docHash">
               Hash do Comprovante: {{docHash}}
             </div>
 
           <div class="upload-list"></div>
         </div>
+
         <button (click)="verificaEstaNotarizado()" style="height: 10%; width: 25%; margin-left: 6%; margin-top: 10%;  font-size: 21px;" class="br-button primary" type="button">Checar
         </button>
 
         <button (click)="notarizar()" style="height: 12%; width: 35%;  margin-top: 10%; margin-left: 5%;  font-size: 21px;" class="br-button primary" type="button">Notarizar
         </button>
+        
       </div>  
       
       <div [ngClass]="{hidden: !contentHidden}" class="search ">
