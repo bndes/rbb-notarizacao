@@ -33,12 +33,13 @@
                <input type="file" id="arquivo" #fileInput ng2FileSelect [uploader]="this.fileHandleService.uploader" (change)="this.fileHandleService.processaArquivo($event)"/>
           </span>
 
-            <div class="cpf-id1" *ngIf="docHash">
-              Hash do Comprovante: {{docHash}}
-            </div>
-
           <div class="upload-list"></div>
         </div>
+
+        <div class="br-input" *ngIf="docHash">
+          <label for="cpf-id1">Hash do Comprovante: {{docHash}}</label>
+        </div>
+
 
         <button (click)="verificaEstaNotarizado()" style="height: 10%; width: 25%; margin-left: 6%; margin-top: 10%;  font-size: 21px;" class="br-button primary" type="button">Checar
         </button>
