@@ -218,8 +218,11 @@ Se o boolean retornado for true, o vetor de bytes32 é o vetor dos hashs e o de 
 } 
 
     calculaHash (textToHash: string) : string {
-        let textToHashAsHex = utils.formatBytes32String(textToHash);
-        let hash = utils.keccak256(textToHashAsHex);
+        //let textToHashAsHex = utils.formatBytes32String(textToHash);
+        //let hash = utils.keccak256(textToHashAsHex);
+//Compute the keccak256 cryptographic hash of a UTF-8 string, returned as a hex string.
+//TODO: avaliar como se comporta quando nao eh UTF-8. Gera algum problema para o hash?
+        let hash = utils.id(textToHash);
         return hash;
     }
 
