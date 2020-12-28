@@ -79,6 +79,8 @@ nav a {
   padding: 30px;
   color: $white;
   font-size: 1.1em;
+  position: relative;
+  
   display: block;
   transition: all .3s ease-in-out;
   &:hover {
@@ -161,6 +163,7 @@ p {
 .br-upload{
   width: 75%;
   margin-top: 6px;
+  
 }
 
 .notarize, .search {
@@ -189,5 +192,17 @@ p {
     background:$blue;
     box-shadow: 5px 5px 12px rgba($black, .5);
     
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 920px) {
+  .sizeModify{
+     height:90%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 1000px) {
+  nav a {
+    right: 45%;
+
   }
 }

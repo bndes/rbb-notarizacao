@@ -1,9 +1,9 @@
-<div style="position: absolute; background-color: #268744; width: 100%; height: 151%; top: 13.2%; "></div>
+<div style="position: absolute; background-color: #268744; width: 100%; height: 120%; top: 13.2%; "></div>
 <body>
-<div [ngClass]="{container1: !contentHidden}" [ngClass]="{container2: contentHidden}" class="container">
+<div [ngClass]="{container1: !contentHidden}" [ngClass]="{container2: contentHidden}" class="container sizeModify" >
 
-    <div class="leftbox">
-      <nav>
+    <div class="leftbox" >
+      <nav >
         <a id="notarize" (click)="contentHidden = false"><i style="font-size: 180%;" class="fa fa-book"></i></a>
         <a id="search" (click)="contentHidden = true" ><i style="font-size: 180%;" class="fa fa-search"></i></a>
       </nav>
@@ -26,26 +26,31 @@
         <!-- 
         https://stackoverflow.com/questions/39132451/can-i-use-ng2-file-upload-with-button-instead-of-a-file-input
         -->
+        
         <label for="btArquivo">Upload do documento</label>
-        <div class="br-upload">
-          <button id="btArquivo" (click)="fileInput.click()" class="btn btn-default"><i class="fas fa-upload"></i>Upload</button>
+       <!----> <div class="row" style="margin-right: 0px; margin-left: 0px">
+        <div class="br-upload col-2"style=" margin-bottom:50px;" >
+          <button id="btArquivo" style=" margin-bottom:15px;position: absolute; " (click)="fileInput.click()" class="btn btn-default"><i class="fas fa-upload"></i>Upload</button>
           <span style="visibility: hidden; position: absolute; overflow: hidden; width: 0px; height:0px;border:none;margin:0; padding:0">
-               <input type="file" id="arquivo" #fileInput ng2FileSelect [uploader]="this.fileHandleService.uploader" (change)="this.fileHandleService.processaArquivo($event)"/>
+            <input type="file" id="arquivo" #fileInput ng2FileSelect [uploader]="this.fileHandleService.uploader" (change)="this.fileHandleService.processaArquivo($event)"/>
           </span>
 
           <div class="upload-list"></div>
         </div>
-
-        <div class="br-input" *ngIf="docHash">
-          <label for="cpf-id1">Hash do Comprovante: {{docHash}}</label>
+      
+         <div class="br-input col-8 " style="word-break: break-all; margin-left: 15px; margin-right: 15px;" *ngIf="docHash">
+           <!--<div class="br-input col-4" style="word-break: break-all;" *ngIf="docHash">-->
+          <label style="" for="cpf-id1">Hash do Comprovante: {{docHash}}</label>
         </div>
-
-
-        <button (click)="verificaEstaNotarizado()" style="height: 10%; width: 25%; margin-left: 6%; margin-top: 10%;  font-size: 21px;" class="br-button primary" type="button">Checar
+        
+        <!----></div>
+        <div class="row"  style="height=50px; margin-top: 20px;">
+        <button (click)="verificaEstaNotarizado()" style="height: 10%; width: 25%; margin-left: 6%; margin-bottom: 7%;  font-size: 21px;" class="br-button primary" type="button">Checar
         </button>
 
-        <button (click)="notarizar()" style="height: 12%; width: 35%;  margin-top: 10%; margin-left: 5%;  font-size: 21px;" class="br-button primary" type="button">Notarizar
+        <button (click)="notarizar()" style="height: 12%; width: 35%;  margin-bottom: 7%; margin-left: 5%;  font-size: 21px;" class="br-button primary" type="button">Notarizar
         </button>
+        </div>
         
       </div>  
       
