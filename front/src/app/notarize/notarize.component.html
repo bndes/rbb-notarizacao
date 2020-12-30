@@ -1,4 +1,4 @@
-<div style="position: absolute; background-color: #268744; width: 100%; height: 120%; top: 13.2%; "></div>
+<div style="position: absolute; background-color: #268744; width: 100%; height: 131%; top: 13.2%; "></div>
 <body>
 <div [ngClass]="{container1: !contentHidden}" [ngClass]="{container2: contentHidden}" class="container sizeModify" >
 
@@ -40,11 +40,11 @@
       
          <div class="br-input col-8 " style="word-break: break-all; margin-left: 15px; margin-right: 15px;" *ngIf="docHash">
            <!--<div class="br-input col-4" style="word-break: break-all;" *ngIf="docHash">-->
-          <label style="" for="cpf-id1">Hash do Comprovante: {{docHash}}</label>
+          <label  for="cpf-id1">Hash do Comprovante: {{docHash}}</label>
         </div>
         
         <!----></div>
-        <div class="row"  style="height=50px; margin-top: 20px;">
+        <div class="row"  style=" margin-top: 20px;">
         <button (click)="verificaEstaNotarizado()" style="height: 10%; width: 25%; margin-left: 6%; margin-bottom: 7%;  font-size: 21px;" class="br-button primary" type="button">Checar
         </button>
 
@@ -59,17 +59,17 @@
         
         <div class="br-input">
           <label for="cpf-id1">CNPJ do Notarizador </label>
-          <input id="cpf-id1" type="text" placeholder="Ex.: 0151140">
+          <input id="cpf-id1"[(ngModel)]="idParaBusca"  type="text" placeholder="Ex.: 0151140">
         </div>
          
         <div  class="br-input">
           <label for="cpf-id1">Nome do campo de identificação do documento </label>
-          <input id="cpf-id1" type="text" placeholder="Ex.: 0151140">
+          <input id="cpf-id1" [(ngModel)]="docMetadada" type="text" placeholder="Ex.: 0151140">
         </div>
          
         <div  class="br-input">
           <label for="cpf-id1">Valor do campo de identificação do documento </label>
-          <input id="cpf-id1" type="text" placeholder="Ex.: 0151140">
+          <input id="cpf-id1" type="text" [(ngModel)]="docId" placeholder="Ex.: 0151140">
         </div>
 
         <button (click)="buscarVersoes()" style="height: 14%; width: 35%;  margin-top: 5%; margin-left: 20%;  font-size: 21px;" class="br-button primary" type="button">Buscar

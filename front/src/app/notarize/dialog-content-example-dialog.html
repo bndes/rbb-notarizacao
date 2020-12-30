@@ -1,4 +1,7 @@
-<h2 mat-dialog-title class="br-modal">Existe uma versão anterior desse arquivo que ja foi notarizada.</h2>
+<h2 mat-dialog-title class="br-modal " *ngIf="data.showTextoDeErro===true" style="word-break: break-all;  height:100px;">{{data.textoDeErro}}</h2>
+<div class="br-modal " *ngIf="data.showHash===true" style="word-break: break-all; overflow-y: scroll; height:200px;" >
+  <h2 mat-dialog-title  *ngFor="let value of data.hash let i=index" >Hash: {{data.hash[i]}}<br> datas: {{data.date[i]}}</h2>
+ </div>
 <mat-dialog-content class="mat-typography">
 
 </mat-dialog-content>
@@ -6,3 +9,15 @@
   <button mat-button mat-dialog-close>Cancel</button>
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>OK</button>
 </mat-dialog-actions>
+<!--<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>-->
