@@ -59,9 +59,9 @@
         
         <div class="br-input">
           <label for="cpf-id1">CNPJ do Notarizador </label>
-          <input id="cpf-id1"[(ngModel)]="idParaBusca"  type="text" placeholder="Ex.: 0151140">
+          <input  id="cpf-id1"[(ngModel)]="cnpjParaBusca"  type="text" placeholder="Ex.: 0151140" >
         </div>
-         
+         <!--[textMask]="{mask: maskCnpj}-->
         <div  class="br-input">
           <label for="cpf-id1">Nome do campo de identificação do documento </label>
           <input id="cpf-id1" [(ngModel)]="docMetadada" type="text" placeholder="Ex.: 0151140">
