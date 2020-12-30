@@ -4,7 +4,7 @@ import { MatDialog,MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialo
 import {Web3Service} from '../Web3Service';
 import {FileHandleService} from '../file-handle.service';
 import { ThrowStmt } from '@angular/compiler';
-//import { Utils } from '../shared/utils'
+import { Utils } from '../shared/utils'
 
 
 @Component({
@@ -18,12 +18,12 @@ export class NotarizeComponent implements OnInit {
   docHash: string = "";
   docMetadada: string = "";
   docId: string = "";
-  cnpjParaBusca: number ; 
+  cnpjParaBusca: string ; 
   maskCnpj:any;
  
 
   ngOnInit(): void {
-    //this.maskCnpj = Utils.getMaskCnpj();
+    this.maskCnpj = Utils.getMaskCnpj();
   }
   
  
@@ -55,7 +55,7 @@ export class NotarizeComponent implements OnInit {
     if(estaNotarizado){
       //this.openDialog();
       console.log("NOTARIZADO");
-      this.openDialog("o documento foi notarizado");
+      this.openDialog("o documento ja foi notarizado");
 
     }
     else {
@@ -89,15 +89,16 @@ export class NotarizeComponent implements OnInit {
   }
 
   async buscarVersoes() {
-    //console.log(this.cnpjParaBusca);
+    
+    
     if(this.cnpjParaBusca==undefined || this.docId == "" || this.docMetadada==""){
       this.openDialog("verifique se os campos estao preenchidos");
       return;
     }
     
+   let cnpj = Utils.removeSpecialCharacters(this.cnpjParaBusca);
     
-    
-    let versoes= await this.web3Service.buscaVersoes(this.cnpjParaBusca, this.docMetadada, this.docId);
+    let versoes= await this.web3Service.buscaVersoes(Number(cnpj), this.docMetadada, this.docId);
     
     
     

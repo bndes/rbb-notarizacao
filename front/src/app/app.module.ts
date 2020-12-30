@@ -16,6 +16,7 @@ import { Web3Service } from './Web3Service';
 import { ConstantesService } from './ConstantesService';
 import { FileUploadModule } from 'ng2-file-upload';
 import {FileHandleService} from './file-handle.service';
+import { TextMaskModule } from 'angular2-text-mask';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {FileHandleService} from './file-handle.service';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    FileUploadModule
+    FileUploadModule,
+    TextMaskModule
   ],
   providers: [Web3Service, ConstantesService, FileHandleService],
   bootstrap: [AppComponent]
