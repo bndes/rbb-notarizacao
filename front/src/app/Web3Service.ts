@@ -193,10 +193,10 @@ export class Web3Service {
     }
 
     async buscaVersoes(attesterCNPJ: number, docMetadata: string, docId:string) {
-
+        let id = await this.getRBBIDByCNPJSync(attesterCNPJ);
         const signer = this.accountProvider.getSigner();
         const contWithSigner =await this.notarizerSmartContract.connect(signer);
-        return await contWithSigner.notarizationInfoByData(attesterCNPJ, docMetadata,docId);
+        return await contWithSigner.notarizationInfoByData(id, docMetadata,docId);
         
 
 } 

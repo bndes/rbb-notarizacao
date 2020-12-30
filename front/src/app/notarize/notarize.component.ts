@@ -4,6 +4,7 @@ import { MatDialog,MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialo
 import {Web3Service} from '../Web3Service';
 import {FileHandleService} from '../file-handle.service';
 import { ThrowStmt } from '@angular/compiler';
+import { Utils } from '../shared/utils'
 
 
 @Component({
@@ -17,10 +18,14 @@ export class NotarizeComponent implements OnInit {
   docHash: string = "";
   docMetadada: string = "";
   docId: string = "";
-  idParaBusca: number ; 
+  cnpjParaBusca: string ; 
+  maskCnpj:any;
+ 
 
   ngOnInit(): void {
+    this.maskCnpj = Utils.getMaskCnpj();
   }
+  
  
   constructor(private web3Service: Web3Service, public dialog: MatDialog, public fileHandleService: FileHandleService) { 
 
@@ -50,12 +55,12 @@ export class NotarizeComponent implements OnInit {
     if(estaNotarizado){
       //this.openDialog();
       console.log("NOTARIZADO");
-      this.openDialog("NOTARIZADO");
+      this.openDialog("o documento ja foi notarizado");
 
     }
     else {
       console.log("AINDA NAO NOTARIZADO");
-      this.openDialog("AINDA NAO NOTARIZADO");
+      this.openDialog("o documento ainda não foi notarizado");
     }
    
   }
@@ -84,16 +89,36 @@ export class NotarizeComponent implements OnInit {
   }
 
   async buscarVersoes() {
-    if(this.idParaBusca==undefined || this.docId == "" || this.docMetadada==""){
+    
+    
+    if(this.cnpjParaBusca==undefined || this.docId == "" || this.docMetadada==""){
       this.openDialog("verifique se os campos estao preenchidos");
       return;
     }
     
+   let cnpj = Utils.removeSpecialCharacters(this.cnpjParaBusca);
     
-    let versoes= await this.web3Service.buscaVersoes(this.idParaBusca, this.docMetadada, this.docId);
-    console.log(versoes[0]);
+    let versoes= await this.web3Service.buscaVersoes(Number(cnpj), this.docMetadada, this.docId);
+    
+    
+    
+    
+    
+    
+    
+
     if(versoes[0]){
-      this.showVersoesOpenDialog(versoes);
+      let data=[];
+      for (let time of versoes[2] ) {
+        //let cover = parseInt(Number(time._hex), 10);
+        let cover = Number(time._hex);
+        data.push( new Date(cover *1000));
+      }
+      this.showVersoesOpenDialog(versoes,data);
+    }
+    else{
+      this.openDialog("nenhuma versão encontrada");
+
     }
 /*
 TODO:
@@ -128,7 +153,7 @@ Se o boolean retornado for true, o vetor de bytes32 é o vetor dos hashs e o de 
 
   }
 
-  showVersoesOpenDialog(versoes: any) {
+  showVersoesOpenDialog(versoes: any , data: any) {
     /*let a = DialogContentExampleDialog;
     
     const dialogRef = this.dialog.open(DialogContentExampleDialog);
@@ -138,12 +163,13 @@ Se o boolean retornado for true, o vetor de bytes32 é o vetor dos hashs e o de 
     });*/
     
       const dialogRef = this.dialog.open(DialogContentExampleDialog, {
+
         
         data: {textoDeErro: "",
                 showHash:true,
                 hash:versoes[1],
                 showDate:true,
-                date:versoes[2]
+                date:data
 
       }
       });
