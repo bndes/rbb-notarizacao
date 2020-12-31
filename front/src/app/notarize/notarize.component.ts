@@ -4,7 +4,8 @@ import { MatDialog,MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialo
 import {Web3Service} from '../Web3Service';
 import {FileHandleService} from '../file-handle.service';
 import { ThrowStmt } from '@angular/compiler';
-import { Utils } from '../shared/utils'
+import { Utils } from '../shared/utils';
+
 
 
 @Component({
