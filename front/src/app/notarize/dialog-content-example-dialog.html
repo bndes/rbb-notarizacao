@@ -1,6 +1,6 @@
 <h2 mat-dialog-title class="br-modal " *ngIf="data.showTextoDeErro===true" style="word-break: break-all;  height:100px;">{{data.textoDeErro}}</h2>
 <div class="br-modal " *ngIf="data.showHash===true" style="word-break: break-all; overflow-y: scroll; height:200px;" >
-  <h2 mat-dialog-title  *ngFor="let value of data.hash let i=index" >Hash: {{data.hash[i]}}<br> datas: {{data.date[i]}}</h2>
+  <h2 mat-dialog-title  *ngFor="let value of data.hash let i=index" >Hash: {{data.hash[i]}}<br> data: {{data.date[i] | date: 'dd/MM/yyyy hh:mm a' }}</h2>
  </div>
 <mat-dialog-content class="mat-typography">
 
